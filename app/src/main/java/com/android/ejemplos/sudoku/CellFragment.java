@@ -6,29 +6,32 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-
-/**
- * A simple {@link Fragment} subclass.
- */
 public class CellFragment extends Fragment {
 
 
     public CellFragment() {
-        // Required empty public constructor
     }
-
-    TextView textView;
+    RelativeLayout layout;
+    TextView mainNumber;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_cell, container, false);
-        textView = (TextView) view.findViewById(R.id.cell_board_game___number);
-
+        mainNumber = (TextView) view.findViewById(R.id.frament_cell___main_number);
+        layout = (RelativeLayout) view.findViewById(R.id.fragment_cell___layout);
         return view;
     }
 
+    public void setMainNumberWhenPressed() {
+        layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mainNumber.setText(KeyboardFragment.currentNumber);
+            }
+        });
+    }
 }
