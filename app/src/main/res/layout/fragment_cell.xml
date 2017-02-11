@@ -1,12 +1,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_cell___layout"
     android:orientation="vertical"
     android:layout_width="@dimen/cell_size"
     android:layout_height="@dimen/cell_size"
     android:gravity="center">
 
     <TextView
-        android:id="@+id/cell_board_game___number"
+        android:id="@+id/frament_cell___main_number"
         android:layout_width="@dimen/cell_size"
         android:layout_height="@dimen/cell_size"
         android:gravity="center"
