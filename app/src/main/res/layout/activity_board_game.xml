@@ -13,7 +13,8 @@
    <GridLayout
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
-       android:columnCount="9">
+       android:columnCount="9"
+       android:layout_centerHorizontal="true">
 
       <fragment
           android:id="@+id/cell_1_1"
