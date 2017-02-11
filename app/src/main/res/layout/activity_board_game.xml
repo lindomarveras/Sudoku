@@ -584,4 +584,11 @@
           tools:layout="@layout/fragment_cell" />
 
    </GridLayout>
+
+    <fragment
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:name="com.android.ejemplos.sudoku.KeyboardFragment"
+        android:layout_alignParentBottom="true"
+        tools:layout="@layout/fragment_keyboard" />
 </RelativeLayout>
