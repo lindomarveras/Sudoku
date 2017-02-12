@@ -30,8 +30,10 @@ public class CellFragment extends Fragment {
         layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mainNumber.setText(KeyboardFragment.currentNumber);
-                setBackgroundColor();
+                if(!KeyboardFragment.currentNumber.equals("")) {
+                    mainNumber.setText(KeyboardFragment.currentNumber);
+                    setBackgroundColor();
+                }
             }
         });
     }
