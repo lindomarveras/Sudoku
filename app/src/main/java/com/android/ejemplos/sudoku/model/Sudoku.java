@@ -54,5 +54,6 @@ public class Sudoku {
         LifeFragment.restartIcons();
         life_couter = 4;
         generateBoardGame(Constants.MEDIUM_LEVEL);
+        BoardGameActivity.setTextLevel("Level: medium");
     }
 }

@@ -11,10 +11,21 @@
     tools:context="com.android.ejemplos.sudoku.activities.BoardGameActivity"
     android:background="@color/background">
 
+    <TextView
+        android:id="@+id/activity_board_game_level_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/activity_board_game_text_level_string"
+        android:textColor="@color/text_color"
+        android:layout_margin="@dimen/level_text_margin"
+        android:textStyle="bold"
+        android:textSize="@dimen/level_text_size"/>
+
    <GridLayout
        android:id="@+id/activity_board_game_board_game"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
+       android:layout_below="@+id/activity_board_game_level_text"
        android:columnCount="9"
        android:layout_centerHorizontal="true">
 

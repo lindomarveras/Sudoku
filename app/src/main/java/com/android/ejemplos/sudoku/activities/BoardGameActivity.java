@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.android.ejemplos.sudoku.fragments.CellFragment;
 import com.android.ejemplos.sudoku.R;
@@ -102,12 +103,17 @@ public class BoardGameActivity extends AppCompatActivity {
     private CellFragment cell_9_8;
     private CellFragment cell_9_9;
 
+    private static TextView textLevel;
+
     private static CellFragment arrayCell[][] = new CellFragment[9][9];
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_board_game);
+
+        textLevel = (TextView) findViewById(R.id.activity_board_game_level_text);
 
         cell_1_1 = (CellFragment) getSupportFragmentManager().findFragmentById(R.id.activity_board_game_cell_1_1);
         cell_1_2 = (CellFragment) getSupportFragmentManager().findFragmentById(R.id.activity_board_game_cell_1_2);
@@ -295,6 +301,7 @@ public class BoardGameActivity extends AppCompatActivity {
             }
         }
         Sudoku.generateBoardGame(Constants.MEDIUM_LEVEL);
+        textLevel.setText("Level: medium");
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -313,15 +320,22 @@ public class BoardGameActivity extends AppCompatActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.menu_level___easy) {
             Sudoku.generateBoardGame(Constants.EASY_LEVEL);
+            textLevel.setText("Level: easy");
         } else if (id == R.id.menu_level___medium) {
             Sudoku.generateBoardGame(Constants.MEDIUM_LEVEL);
+            textLevel.setText("Level: medium");
         } else if(id == R.id.menu_level___hard) {
             Sudoku.generateBoardGame(Constants.HARD_LEVEL);
+            textLevel.setText("Level: hard");
         }
         return super.onOptionsItemSelected(item);
     }
 
     public static CellFragment[][] getArrayCellFragment() {
         return arrayCell;
+    }
+
+    public static void setTextLevel(String text) {
+        textLevel.setText(text);
     }
 }
