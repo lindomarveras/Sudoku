@@ -3,6 +3,7 @@ package com.android.ejemplos.sudoku.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,7 +11,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.android.ejemplos.sudoku.R;
-import com.android.ejemplos.sudoku.model.Constants;
+import com.android.ejemplos.sudoku.util.Constants;
 import com.android.ejemplos.sudoku.model.Sudoku;
 
 public class CellFragment extends Fragment {
@@ -40,10 +41,7 @@ public class CellFragment extends Fragment {
                         setBackgroundColor(R.drawable.corner_radius_painted);
                     } else {
                         if(Sudoku.life_couter == 0) {
-                            LifeFragment.restartIcons();
-                            Sudoku.life_couter = 4;
-                            Sudoku.generateBoardGame(Constants.MEDIUM_LEVEL);
-
+                            com.android.ejemplos.sudoku.util.AlertDialog.gameOver(view.getContext());
                         } else {
                             LifeFragment.setIconImage(LifeFragment.arrayIcon[Sudoku.life_couter], R.drawable.heart_icon_empty);
                             Sudoku.life_couter = Sudoku.life_couter - 1;

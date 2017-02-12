@@ -3,6 +3,8 @@ package com.android.ejemplos.sudoku.model;
 import com.android.ejemplos.sudoku.R;
 import com.android.ejemplos.sudoku.activities.BoardGameActivity;
 import com.android.ejemplos.sudoku.fragments.CellFragment;
+import com.android.ejemplos.sudoku.fragments.LifeFragment;
+import com.android.ejemplos.sudoku.util.Constants;
 
 import java.util.Random;
 
@@ -46,5 +48,11 @@ public class Sudoku {
                 arrayCellFragment[r][c].setBackgroundColor(R.drawable.corner_radius_unpainted);
             }
         }
+    }
+
+    public static void restartApp() {
+        LifeFragment.restartIcons();
+        life_couter = 4;
+        generateBoardGame(Constants.MEDIUM_LEVEL);
     }
 }
