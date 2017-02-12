@@ -1,4 +1,4 @@
-package com.android.ejemplos.sudoku.util.;
+package com.android.ejemplos.sudoku.util;
 
 public class Constants {
     public static final int EASY_LEVEL = 40;
