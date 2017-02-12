@@ -31,7 +31,11 @@ public class CellFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 mainNumber.setText(KeyboardFragment.currentNumber);
+                setBackgroundColor();
             }
         });
+    }
+    public void setBackgroundColor() {
+        layout.setBackgroundResource(R.drawable.corner_radius_painted);
     }
 }
