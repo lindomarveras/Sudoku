@@ -7,6 +7,7 @@ import android.view.MenuItem;
 
 import com.android.ejemplos.sudoku.fragments.CellFragment;
 import com.android.ejemplos.sudoku.R;
+import com.android.ejemplos.sudoku.model.Constants;
 import com.android.ejemplos.sudoku.model.Sudoku;
 
 public class BoardGameActivity extends AppCompatActivity {
@@ -293,6 +294,7 @@ public class BoardGameActivity extends AppCompatActivity {
                 arrayCell[i][j].setMainNumberWhenPressed();
             }
         }
+        Sudoku.generateBoardGame(Constants.MEDIUM_LEVEL);
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -310,11 +312,11 @@ public class BoardGameActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.menu_level___easy) {
-            Sudoku.generateBoardGame(40);
+            Sudoku.generateBoardGame(Constants.EASY_LEVEL);
         } else if (id == R.id.menu_level___medium) {
-            Sudoku.generateBoardGame(20);
+            Sudoku.generateBoardGame(Constants.MEDIUM_LEVEL);
         } else if(id == R.id.menu_level___hard) {
-            Sudoku.generateBoardGame(10);
+            Sudoku.generateBoardGame(Constants.HARD_LEVEL);
         }
         return super.onOptionsItemSelected(item);
     }
