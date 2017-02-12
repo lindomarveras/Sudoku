@@ -10,7 +10,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.android.ejemplos.sudoku.R;
-import com.android.ejemplos.sudoku.activities.BoardGameActivity;
 import com.android.ejemplos.sudoku.model.Constants;
 import com.android.ejemplos.sudoku.model.Sudoku;
 
@@ -50,7 +49,6 @@ public class CellFragment extends Fragment {
                             Sudoku.life_couter = Sudoku.life_couter - 1;
                         }
                     }
-
                 }
             }
         });
