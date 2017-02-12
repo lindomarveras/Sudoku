@@ -2,9 +2,12 @@ package com.android.ejemplos.sudoku.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 
 import com.android.ejemplos.sudoku.fragments.CellFragment;
 import com.android.ejemplos.sudoku.R;
+import com.android.ejemplos.sudoku.model.Sudoku;
 
 public class BoardGameActivity extends AppCompatActivity {
 
@@ -97,6 +100,8 @@ public class BoardGameActivity extends AppCompatActivity {
     private CellFragment cell_9_7;
     private CellFragment cell_9_8;
     private CellFragment cell_9_9;
+
+    private static CellFragment arrayCell[][] = new CellFragment[9][9];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -193,18 +198,100 @@ public class BoardGameActivity extends AppCompatActivity {
         cell_9_8 = (CellFragment) getSupportFragmentManager().findFragmentById(R.id.activity_board_game_cell_9_8);
         cell_9_9 = (CellFragment) getSupportFragmentManager().findFragmentById(R.id.activity_board_game_cell_9_9);
 
-        CellFragment arrayCell[] = {cell_1_1, cell_1_2, cell_1_3, cell_1_4, cell_1_5, cell_1_6, cell_1_7, cell_1_8, cell_1_9,
-                                    cell_2_1, cell_2_2, cell_2_3, cell_2_4, cell_2_5, cell_2_6, cell_2_7, cell_2_8, cell_2_9,
-                                    cell_3_1, cell_3_2, cell_3_3, cell_3_4, cell_3_5, cell_3_6, cell_3_7, cell_3_8, cell_3_9,
-                                    cell_4_1, cell_4_2, cell_4_3, cell_4_4, cell_4_5, cell_4_6, cell_4_7, cell_4_8, cell_4_9,
-                                    cell_5_1, cell_5_2, cell_5_3, cell_5_4, cell_5_5, cell_5_6, cell_5_7, cell_5_8, cell_5_9,
-                                    cell_6_1, cell_6_2, cell_6_3, cell_6_4, cell_6_5, cell_6_6, cell_6_7, cell_6_8, cell_6_9,
-                                    cell_7_1, cell_7_2, cell_7_3, cell_7_4, cell_7_5, cell_7_6, cell_7_7, cell_7_8, cell_7_9,
-                                    cell_8_1, cell_8_2, cell_8_3, cell_8_4, cell_8_5, cell_8_6, cell_8_7, cell_8_8, cell_8_9,
-                                    cell_9_1, cell_9_2, cell_9_3, cell_9_4, cell_9_5, cell_9_6, cell_9_7, cell_9_8, cell_9_9};
+        arrayCell[0][0] = cell_1_1;
+        arrayCell[0][1] = cell_1_2;
+        arrayCell[0][2] = cell_1_3;
+        arrayCell[0][3] = cell_1_4;
+        arrayCell[0][4] = cell_1_5;
+        arrayCell[0][5] = cell_1_6;
+        arrayCell[0][6] = cell_1_7;
+        arrayCell[0][7] = cell_1_8;
+        arrayCell[0][8] = cell_1_9;
 
-        for (CellFragment cell: arrayCell) {
-            cell.setMainNumberWhenPressed();
+        arrayCell[1][0] = cell_2_1;
+        arrayCell[1][1] = cell_2_2;
+        arrayCell[1][2] = cell_2_3;
+        arrayCell[1][3] = cell_2_4;
+        arrayCell[1][4] = cell_2_5;
+        arrayCell[1][5] = cell_2_6;
+        arrayCell[1][6] = cell_2_7;
+        arrayCell[1][7] = cell_2_8;
+        arrayCell[1][8] = cell_2_9;
+
+        arrayCell[2][0] = cell_3_1;
+        arrayCell[2][1] = cell_3_2;
+        arrayCell[2][2] = cell_3_3;
+        arrayCell[2][3] = cell_3_4;
+        arrayCell[2][4] = cell_3_5;
+        arrayCell[2][5] = cell_3_6;
+        arrayCell[2][6] = cell_3_7;
+        arrayCell[2][7] = cell_3_8;
+        arrayCell[2][8] = cell_3_9;
+
+        arrayCell[3][0] = cell_4_1;
+        arrayCell[3][1] = cell_4_2;
+        arrayCell[3][2] = cell_4_3;
+        arrayCell[3][3] = cell_4_4;
+        arrayCell[3][4] = cell_4_5;
+        arrayCell[3][5] = cell_4_6;
+        arrayCell[3][6] = cell_4_7;
+        arrayCell[3][7] = cell_4_8;
+        arrayCell[3][8] = cell_4_9;
+
+        arrayCell[4][0] = cell_5_1;
+        arrayCell[4][1] = cell_5_2;
+        arrayCell[4][2] = cell_5_3;
+        arrayCell[4][3] = cell_5_4;
+        arrayCell[4][4] = cell_5_5;
+        arrayCell[4][5] = cell_5_6;
+        arrayCell[4][6] = cell_5_7;
+        arrayCell[4][7] = cell_5_8;
+        arrayCell[4][8] = cell_5_9;
+
+        arrayCell[5][0] = cell_6_1;
+        arrayCell[5][1] = cell_6_2;
+        arrayCell[5][2] = cell_6_3;
+        arrayCell[5][3] = cell_6_4;
+        arrayCell[5][4] = cell_6_5;
+        arrayCell[5][5] = cell_6_6;
+        arrayCell[5][6] = cell_6_7;
+        arrayCell[5][7] = cell_6_8;
+        arrayCell[5][8] = cell_6_9;
+
+        arrayCell[6][0] = cell_7_1;
+        arrayCell[6][1] = cell_7_2;
+        arrayCell[6][2] = cell_7_3;
+        arrayCell[6][3] = cell_7_4;
+        arrayCell[6][4] = cell_7_5;
+        arrayCell[6][5] = cell_7_6;
+        arrayCell[6][6] = cell_7_7;
+        arrayCell[6][7] = cell_7_8;
+        arrayCell[6][8] = cell_7_9;
+
+        arrayCell[7][0] = cell_8_1;
+        arrayCell[7][1] = cell_8_2;
+        arrayCell[7][2] = cell_8_3;
+        arrayCell[7][3] = cell_8_4;
+        arrayCell[7][4] = cell_8_5;
+        arrayCell[7][5] = cell_8_6;
+        arrayCell[7][6] = cell_8_7;
+        arrayCell[7][7] = cell_8_8;
+        arrayCell[7][8] = cell_8_9;
+
+        arrayCell[8][0] = cell_9_1;
+        arrayCell[8][1] = cell_9_2;
+        arrayCell[8][2] = cell_9_3;
+        arrayCell[8][3] = cell_9_4;
+        arrayCell[8][4] = cell_9_5;
+        arrayCell[8][5] = cell_9_6;
+        arrayCell[8][6] = cell_9_7;
+        arrayCell[8][7] = cell_9_8;
+        arrayCell[8][8] = cell_9_9;
+
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                arrayCell[i][j].setMainNumberWhenPressed();
+            }
         }
     }
 }
