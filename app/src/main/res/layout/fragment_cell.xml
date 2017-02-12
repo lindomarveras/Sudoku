@@ -4,7 +4,9 @@
     android:orientation="vertical"
     android:layout_width="@dimen/cell_size"
     android:layout_height="@dimen/cell_size"
-    android:gravity="center">
+    android:gravity="center"
+    android:background="@drawable/corner_radius_unpainted"
+    android:layout_margin="20dp">
 
     <TextView
         android:id="@+id/frament_cell___main_number"
@@ -13,7 +15,6 @@
         android:gravity="center"
         tools:text="4"
         android:textColor="#000000"
-        android:textSize="@dimen/principal_text_size"
-        android:background="@drawable/border"/>
+        android:textSize="@dimen/principal_text_size" />
 
 </RelativeLayout>
