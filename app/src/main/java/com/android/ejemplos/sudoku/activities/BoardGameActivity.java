@@ -7,7 +7,7 @@ import android.view.MenuItem;
 
 import com.android.ejemplos.sudoku.fragments.CellFragment;
 import com.android.ejemplos.sudoku.R;
-import com.android.ejemplos.sudoku.model.Constants;
+import com.android.ejemplos.sudoku.util.Constants;
 import com.android.ejemplos.sudoku.model.Sudoku;
 
 public class BoardGameActivity extends AppCompatActivity {
