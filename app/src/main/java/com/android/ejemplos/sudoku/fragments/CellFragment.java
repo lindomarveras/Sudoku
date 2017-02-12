@@ -34,12 +34,16 @@ public class CellFragment extends Fragment {
             public void onClick(View view) {
                 if(!KeyboardFragment.currentNumber.equals("")) {
                     mainNumber.setText(KeyboardFragment.currentNumber);
-                    setBackgroundColor();
+                    setBackgroundColor(R.drawable.corner_radius_painted);
                 }
             }
         });
     }
-    public void setBackgroundColor() {
-        layout.setBackgroundResource(R.drawable.corner_radius_painted);
+    public void setBackgroundColor(int drawable) {
+        layout.setBackgroundResource(drawable);
+    }
+
+    public void setMainNumber(String number) {
+        mainNumber.setText(number);
     }
 }
