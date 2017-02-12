@@ -24,6 +24,8 @@ public class KeyboardFragment extends Fragment {
     Button button8;
     Button button9;
 
+    Button arrayButton[] = new Button[9];
+
     public KeyboardFragment() {
     }
 
@@ -42,17 +44,36 @@ public class KeyboardFragment extends Fragment {
         button8 = (Button) view.findViewById(R.id.fragment_keyboard_button_8);
         button9 = (Button) view.findViewById(R.id.fragment_keyboard_button_9);
 
-        Button arrayButton[] = {button1, button2, button3, button4, button5, button6, button7, button8, button9};
+        arrayButton[0] = button1;
+        arrayButton[1] = button2;
+        arrayButton[2] = button3;
+        arrayButton[3] = button4;
+        arrayButton[4] = button5;
+        arrayButton[5] = button6;
+        arrayButton[6] = button7;
+        arrayButton[7] = button8;
+        arrayButton[8] = button9;
 
         for (final Button button: arrayButton) {
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     currentNumber = button.getText().toString();
+                    setBackgroundColor();
                 }
             });
         }
 
         return view;
+    }
+
+    public void setBackgroundColor() {
+        for (Button button: arrayButton) {
+            if(currentNumber.equals(button.getText().toString())) {
+                button.setBackgroundResource(R.drawable.corner_radius_painted);
+            } else {
+                button.setBackgroundResource(R.drawable.corner_radius_unpainted);
+            }
+        }
     }
 }
