@@ -14,7 +14,7 @@
         android:layout_height="@dimen/cell_size"
         android:gravity="center"
         tools:text="4"
-        android:textColor="#000000"
+        android:textColor="@color/text_color"
         android:textSize="@dimen/principal_text_size" />
 
 </RelativeLayout>
