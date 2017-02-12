@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.android.ejemplos.sudoku.BoardGameActivity"
+    tools:context="com.android.ejemplos.sudoku.activities.BoardGameActivity"
     android:background="@color/background">
 
    <GridLayout
@@ -22,7 +22,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -30,7 +30,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -38,7 +38,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -46,7 +46,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -54,7 +54,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -62,7 +62,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -70,7 +70,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -78,7 +78,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -86,7 +86,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -94,7 +94,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -102,7 +102,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -110,7 +110,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -118,7 +118,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -126,7 +126,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -134,7 +134,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -142,7 +142,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -150,7 +150,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -158,7 +158,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -166,7 +166,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -174,7 +174,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -182,7 +182,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -190,7 +190,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -198,7 +198,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -206,7 +206,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -214,7 +214,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -222,7 +222,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -230,7 +230,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -238,7 +238,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -246,7 +246,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -254,7 +254,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -262,7 +262,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -270,7 +270,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -278,7 +278,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -286,7 +286,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -294,7 +294,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -302,7 +302,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -310,7 +310,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -318,7 +318,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -326,7 +326,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -334,7 +334,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -342,7 +342,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -350,7 +350,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -358,7 +358,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -366,7 +366,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -374,7 +374,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -382,7 +382,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -390,7 +390,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -398,7 +398,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -406,7 +406,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -414,7 +414,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -422,7 +422,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -430,7 +430,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -438,7 +438,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -446,7 +446,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -454,7 +454,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -462,7 +462,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -470,7 +470,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -478,7 +478,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -486,7 +486,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -494,7 +494,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -502,7 +502,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -510,7 +510,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -518,7 +518,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -526,7 +526,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -534,7 +534,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -542,7 +542,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -550,7 +550,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -558,7 +558,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -566,7 +566,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -574,7 +574,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -582,7 +582,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -590,7 +590,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -598,7 +598,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -606,7 +606,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -614,7 +614,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -622,7 +622,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -630,7 +630,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -638,7 +638,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -646,7 +646,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -654,7 +654,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
       <fragment
@@ -662,7 +662,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/cell_margin"
-          android:name="com.android.ejemplos.sudoku.CellFragment"
+          android:name="com.android.ejemplos.sudoku.fragments.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
    </GridLayout>
@@ -670,7 +670,7 @@
     <fragment
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:name="com.android.ejemplos.sudoku.KeyboardFragment"
+        android:name="com.android.ejemplos.sudoku.fragments.KeyboardFragment"
         android:layout_alignParentBottom="true"
         tools:layout="@layout/fragment_keyboard" />
 </RelativeLayout>

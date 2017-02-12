@@ -1,4 +1,4 @@
-package com.android.ejemplos.sudoku;
+package com.android.ejemplos.sudoku.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.android.ejemplos.sudoku.R;
 
 
 public class KeyboardFragment extends Fragment {

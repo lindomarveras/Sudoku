@@ -1,8 +1,10 @@
-package com.android.ejemplos.sudoku;
+package com.android.ejemplos.sudoku.activities;
 
-import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.android.ejemplos.sudoku.fragments.CellFragment;
+import com.android.ejemplos.sudoku.R;
 
 public class BoardGameActivity extends AppCompatActivity {
 

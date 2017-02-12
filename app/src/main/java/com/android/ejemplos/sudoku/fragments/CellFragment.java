@@ -1,4 +1,4 @@
-package com.android.ejemplos.sudoku;
+package com.android.ejemplos.sudoku.fragments;
 
 
 import android.os.Bundle;
@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.android.ejemplos.sudoku.R;
 
 public class CellFragment extends Fragment {
 
