@@ -16,7 +16,7 @@ public class AlertDialog {
         dialog.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                Sudoku.restartApp();
+                Sudoku.generateBoardGame(Constants.MEDIUM_LEVEL_CELL_NUMBER, Constants.MEDIUM_LEVEL_TEXT);
             }
         });
         dialog.setNegativeButton(android.R.string.cancel,null);

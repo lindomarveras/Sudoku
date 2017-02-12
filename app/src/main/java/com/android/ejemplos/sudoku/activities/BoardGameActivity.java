@@ -300,8 +300,7 @@ public class BoardGameActivity extends AppCompatActivity {
                 arrayCell[i][j].setMainNumberWhenPressed(i, j);
             }
         }
-        Sudoku.generateBoardGame(Constants.MEDIUM_LEVEL);
-        textLevel.setText("Level: medium");
+        Sudoku.generateBoardGame(Constants.MEDIUM_LEVEL_CELL_NUMBER, Constants.MEDIUM_LEVEL_TEXT);
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -319,14 +318,11 @@ public class BoardGameActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.menu_level___easy) {
-            Sudoku.generateBoardGame(Constants.EASY_LEVEL);
-            textLevel.setText("Level: easy");
+            Sudoku.generateBoardGame(Constants.EASY_LEVEL_CELL_NUMBER, Constants.EASY_LEVEL_TEXT);
         } else if (id == R.id.menu_level___medium) {
-            Sudoku.generateBoardGame(Constants.MEDIUM_LEVEL);
-            textLevel.setText("Level: medium");
+            Sudoku.generateBoardGame(Constants.MEDIUM_LEVEL_CELL_NUMBER, Constants.MEDIUM_LEVEL_TEXT);
         } else if(id == R.id.menu_level___hard) {
-            Sudoku.generateBoardGame(Constants.HARD_LEVEL);
-            textLevel.setText("Level: hard");
+            Sudoku.generateBoardGame(Constants.HARD_LEVEL_CELL_NUMBER, Constants.HARD_LEVEL_TEXT);
         }
         return super.onOptionsItemSelected(item);
     }

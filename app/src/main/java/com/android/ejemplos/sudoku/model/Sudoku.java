@@ -4,8 +4,6 @@ import com.android.ejemplos.sudoku.R;
 import com.android.ejemplos.sudoku.activities.BoardGameActivity;
 import com.android.ejemplos.sudoku.fragments.CellFragment;
 import com.android.ejemplos.sudoku.fragments.LifeFragment;
-import com.android.ejemplos.sudoku.util.Constants;
-
 import java.util.Random;
 
 public class Sudoku {
@@ -20,14 +18,13 @@ public class Sudoku {
             {"1", "5", "4", "7", "9", "6", "8", "2", "3"},
             {"2", "3", "9", "8", "4", "1", "5", "6", "7"}};
 
-    public static void generateBoardGame(int numberOfCells) {
-
-
+    public static void generateBoardGame(int numberOfCells, String level) {
         CellFragment[][] arrayCellFragment = BoardGameActivity.getArrayCellFragment();
-
         clearBoardGame(arrayCellFragment);
         printBoardGame(arrayCellFragment, boardGame, numberOfCells);
-
+        LifeFragment.restartIcons();
+        life_couter = 4;
+        BoardGameActivity.setTextLevel(level);
     }
 
     private static void printBoardGame(CellFragment[][] arrayCellFragment, String[][] boardGame, int numberOfCells) {
@@ -48,12 +45,5 @@ public class Sudoku {
                 arrayCellFragment[r][c].setBackgroundColor(R.drawable.corner_radius_unpainted);
             }
         }
-    }
-
-    public static void restartApp() {
-        LifeFragment.restartIcons();
-        life_couter = 4;
-        generateBoardGame(Constants.MEDIUM_LEVEL);
-        BoardGameActivity.setTextLevel("Level: medium");
     }
 }
