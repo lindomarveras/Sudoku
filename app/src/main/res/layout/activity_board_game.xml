@@ -12,6 +12,7 @@
     android:background="@color/background">
 
    <GridLayout
+       android:id="@+id/activity_board_game_board_game"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
        android:columnCount="9"
@@ -668,6 +669,13 @@
    </GridLayout>
 
     <fragment
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:name="com.android.ejemplos.sudoku.fragments.LifeFragment"
+        tools:layout="@layout/fragment_life"
+        android:layout_above="@+id/activity_board_game_keyboard"/>
+    <fragment
+        android:id="@+id/activity_board_game_keyboard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:name="com.android.ejemplos.sudoku.fragments.KeyboardFragment"
