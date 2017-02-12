@@ -181,6 +181,7 @@
           android:id="@+id/activity_board_game_cell_3_3"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:layout_margin="@dimen/cell_margin"
           android:name="com.android.ejemplos.sudoku.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
@@ -332,6 +333,7 @@
           android:id="@+id/activity_board_game_cell_5_4"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:layout_margin="@dimen/cell_margin"
           android:name="com.android.ejemplos.sudoku.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
@@ -339,6 +341,7 @@
           android:id="@+id/activity_board_game_cell_5_5"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:layout_margin="@dimen/cell_margin"
           android:name="com.android.ejemplos.sudoku.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
@@ -346,6 +349,7 @@
           android:id="@+id/activity_board_game_cell_5_6"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:layout_margin="@dimen/cell_margin"
           android:name="com.android.ejemplos.sudoku.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
@@ -353,6 +357,7 @@
           android:id="@+id/activity_board_game_cell_5_7"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:layout_margin="@dimen/cell_margin"
           android:name="com.android.ejemplos.sudoku.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
@@ -360,6 +365,7 @@
           android:id="@+id/activity_board_game_cell_5_8"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:layout_margin="@dimen/cell_margin"
           android:name="com.android.ejemplos.sudoku.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
@@ -367,6 +373,7 @@
           android:id="@+id/activity_board_game_cell_5_9"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:layout_margin="@dimen/cell_margin"
           android:name="com.android.ejemplos.sudoku.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
@@ -374,6 +381,7 @@
           android:id="@+id/activity_board_game_cell_6_1"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:layout_margin="@dimen/cell_margin"
           android:name="com.android.ejemplos.sudoku.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
@@ -381,6 +389,7 @@
           android:id="@+id/activity_board_game_cell_6_2"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:layout_margin="@dimen/cell_margin"
           android:name="com.android.ejemplos.sudoku.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
@@ -388,6 +397,7 @@
           android:id="@+id/activity_board_game_cell_6_3"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:layout_margin="@dimen/cell_margin"
           android:name="com.android.ejemplos.sudoku.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
@@ -395,6 +405,7 @@
           android:id="@+id/activity_board_game_cell_6_4"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:layout_margin="@dimen/cell_margin"
           android:name="com.android.ejemplos.sudoku.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
@@ -402,6 +413,7 @@
           android:id="@+id/activity_board_game_cell_6_5"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:layout_margin="@dimen/cell_margin"
           android:name="com.android.ejemplos.sudoku.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
@@ -409,6 +421,7 @@
           android:id="@+id/activity_board_game_cell_6_6"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:layout_margin="@dimen/cell_margin"
           android:name="com.android.ejemplos.sudoku.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
@@ -416,6 +429,7 @@
           android:id="@+id/activity_board_game_cell_6_7"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:layout_margin="@dimen/cell_margin"
           android:name="com.android.ejemplos.sudoku.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
@@ -423,6 +437,7 @@
           android:id="@+id/activity_board_game_cell_6_8"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:layout_margin="@dimen/cell_margin"
           android:name="com.android.ejemplos.sudoku.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
@@ -430,6 +445,7 @@
           android:id="@+id/activity_board_game_cell_6_9"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:layout_margin="@dimen/cell_margin"
           android:name="com.android.ejemplos.sudoku.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
@@ -437,6 +453,7 @@
           android:id="@+id/activity_board_game_cell_7_1"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:layout_margin="@dimen/cell_margin"
           android:name="com.android.ejemplos.sudoku.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
@@ -444,6 +461,7 @@
           android:id="@+id/activity_board_game_cell_7_2"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:layout_margin="@dimen/cell_margin"
           android:name="com.android.ejemplos.sudoku.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
@@ -451,6 +469,7 @@
           android:id="@+id/activity_board_game_cell_7_3"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:layout_margin="@dimen/cell_margin"
           android:name="com.android.ejemplos.sudoku.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
@@ -458,6 +477,7 @@
           android:id="@+id/activity_board_game_cell_7_4"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:layout_margin="@dimen/cell_margin"
           android:name="com.android.ejemplos.sudoku.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
@@ -465,6 +485,7 @@
           android:id="@+id/activity_board_game_cell_7_5"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:layout_margin="@dimen/cell_margin"
           android:name="com.android.ejemplos.sudoku.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
@@ -472,6 +493,7 @@
           android:id="@+id/activity_board_game_cell_7_6"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:layout_margin="@dimen/cell_margin"
           android:name="com.android.ejemplos.sudoku.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
@@ -479,6 +501,7 @@
           android:id="@+id/activity_board_game_cell_7_7"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:layout_margin="@dimen/cell_margin"
           android:name="com.android.ejemplos.sudoku.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
@@ -486,6 +509,7 @@
           android:id="@+id/activity_board_game_cell_7_8"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:layout_margin="@dimen/cell_margin"
           android:name="com.android.ejemplos.sudoku.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
@@ -493,6 +517,7 @@
           android:id="@+id/activity_board_game_cell_7_9"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:layout_margin="@dimen/cell_margin"
           android:name="com.android.ejemplos.sudoku.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
@@ -500,6 +525,7 @@
           android:id="@+id/activity_board_game_cell_8_1"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:layout_margin="@dimen/cell_margin"
           android:name="com.android.ejemplos.sudoku.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
@@ -507,6 +533,7 @@
           android:id="@+id/activity_board_game_cell_8_2"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:layout_margin="@dimen/cell_margin"
           android:name="com.android.ejemplos.sudoku.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
@@ -514,6 +541,7 @@
           android:id="@+id/activity_board_game_cell_8_3"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:layout_margin="@dimen/cell_margin"
           android:name="com.android.ejemplos.sudoku.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
@@ -521,6 +549,7 @@
           android:id="@+id/activity_board_game_cell_8_4"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:layout_margin="@dimen/cell_margin"
           android:name="com.android.ejemplos.sudoku.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
@@ -528,6 +557,7 @@
           android:id="@+id/activity_board_game_cell_8_5"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:layout_margin="@dimen/cell_margin"
           android:name="com.android.ejemplos.sudoku.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
@@ -535,6 +565,7 @@
           android:id="@+id/activity_board_game_cell_8_6"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:layout_margin="@dimen/cell_margin"
           android:name="com.android.ejemplos.sudoku.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
@@ -542,6 +573,7 @@
           android:id="@+id/activity_board_game_cell_8_7"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:layout_margin="@dimen/cell_margin"
           android:name="com.android.ejemplos.sudoku.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
@@ -549,6 +581,7 @@
           android:id="@+id/activity_board_game_cell_8_8"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:layout_margin="@dimen/cell_margin"
           android:name="com.android.ejemplos.sudoku.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
@@ -556,6 +589,7 @@
           android:id="@+id/activity_board_game_cell_8_9"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:layout_margin="@dimen/cell_margin"
           android:name="com.android.ejemplos.sudoku.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
@@ -563,6 +597,7 @@
           android:id="@+id/activity_board_game_cell_9_1"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:layout_margin="@dimen/cell_margin"
           android:name="com.android.ejemplos.sudoku.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
@@ -570,6 +605,7 @@
           android:id="@+id/activity_board_game_cell_9_2"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:layout_margin="@dimen/cell_margin"
           android:name="com.android.ejemplos.sudoku.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
@@ -577,6 +613,7 @@
           android:id="@+id/activity_board_game_cell_9_3"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:layout_margin="@dimen/cell_margin"
           android:name="com.android.ejemplos.sudoku.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
@@ -584,6 +621,7 @@
           android:id="@+id/activity_board_game_cell_9_4"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:layout_margin="@dimen/cell_margin"
           android:name="com.android.ejemplos.sudoku.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
@@ -591,6 +629,7 @@
           android:id="@+id/activity_board_game_cell_9_5"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:layout_margin="@dimen/cell_margin"
           android:name="com.android.ejemplos.sudoku.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
@@ -598,6 +637,7 @@
           android:id="@+id/activity_board_game_cell_9_6"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:layout_margin="@dimen/cell_margin"
           android:name="com.android.ejemplos.sudoku.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
@@ -605,6 +645,7 @@
           android:id="@+id/activity_board_game_cell_9_7"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:layout_margin="@dimen/cell_margin"
           android:name="com.android.ejemplos.sudoku.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
@@ -612,6 +653,7 @@
           android:id="@+id/activity_board_game_cell_9_8"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:layout_margin="@dimen/cell_margin"
           android:name="com.android.ejemplos.sudoku.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
@@ -619,6 +661,7 @@
           android:id="@+id/activity_board_game_cell_9_9"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:layout_margin="@dimen/cell_margin"
           android:name="com.android.ejemplos.sudoku.CellFragment"
           tools:layout="@layout/fragment_cell" />
 
