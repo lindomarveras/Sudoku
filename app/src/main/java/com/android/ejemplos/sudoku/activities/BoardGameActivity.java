@@ -291,7 +291,7 @@ public class BoardGameActivity extends AppCompatActivity {
 
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
-                arrayCell[i][j].setMainNumberWhenPressed();
+                arrayCell[i][j].setMainNumberWhenPressed(i, j);
             }
         }
         Sudoku.generateBoardGame(Constants.MEDIUM_LEVEL);
