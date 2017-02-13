@@ -1,5 +1,7 @@
 package com.android.ejemplos.sudoku.model;
 
+import android.content.Context;
+
 import com.android.ejemplos.sudoku.R;
 import com.android.ejemplos.sudoku.activities.BoardGameActivity;
 import com.android.ejemplos.sudoku.fragments.CellFragment;
@@ -18,11 +20,11 @@ public class Sudoku {
             {"1", "5", "4", "7", "9", "6", "8", "2", "3"},
             {"2", "3", "9", "8", "4", "1", "5", "6", "7"}};
 
-    public static void generateBoardGame(int numberOfCells, String level) {
+    public static void generateBoardGame(Context context, int numberOfCells, String level) {
         CellFragment[][] arrayCellFragment = BoardGameActivity.getArrayCellFragment();
         clearBoardGame(arrayCellFragment);
         printRandomNumberInBoardGame(arrayCellFragment, boardGame, numberOfCells);
-        LifeFragment.restartIcons();
+        LifeFragment.restartIcons(context);
         life_counter = 4;
         BoardGameActivity.setTextLevel(level);
     }
