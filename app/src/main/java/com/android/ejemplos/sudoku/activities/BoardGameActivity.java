@@ -295,28 +295,23 @@ public class BoardGameActivity extends AppCompatActivity {
         arrayCell[8][7] = cell_9_8;
         arrayCell[8][8] = cell_9_9;
 
-        for (int i = 0; i < 9; i++) {
-            for (int j = 0; j < 9; j++) {
-                arrayCell[i][j].setMainNumberWhenPressed(i, j);
+        for (int r = 0; r < 9; r++) {
+            for (int c = 0; c < 9; c++) {
+                arrayCell[r][c].cellClicked(r, c);
             }
         }
         Sudoku.generateBoardGame(Constants.MEDIUM_LEVEL_CELL_NUMBER, Constants.MEDIUM_LEVEL_TEXT);
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.level_menu, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if (id == R.id.menu_level___easy) {
             Sudoku.generateBoardGame(Constants.EASY_LEVEL_CELL_NUMBER, Constants.EASY_LEVEL_TEXT);
         } else if (id == R.id.menu_level___medium) {

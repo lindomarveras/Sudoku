@@ -26,31 +26,38 @@ public class CellFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_cell, container, false);
+
         mainNumber = (TextView) view.findViewById(R.id.frament_cell___main_number);
         layout = (RelativeLayout) view.findViewById(R.id.fragment_cell___layout);
+
         return view;
     }
 
-    public void setMainNumberWhenPressed(final int i, final int j) {
+    public void cellClicked(final int r, final int c) {
         layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(!KeyboardFragment.currentNumber.equals("")) {
-                    if(KeyboardFragment.currentNumber.equals(Sudoku.boardGame[i][j])) {
-                        mainNumber.setText(KeyboardFragment.currentNumber);
-                        setBackgroundColor(R.drawable.corner_radius_painted);
-                    } else {
-                        if(Sudoku.life_couter == 0) {
-                            com.android.ejemplos.sudoku.util.AlertDialog.gameOver(view.getContext());
-                        } else {
-                            LifeFragment.setIconImage(LifeFragment.arrayIcon[Sudoku.life_couter], R.drawable.heart_icon_empty);
-                            Sudoku.life_couter = Sudoku.life_couter - 1;
-                        }
-                    }
-                }
+                checkMove(view.getContext(), r, c);
             }
         });
     }
+
+    private void checkMove(Context context, int r, int c) {
+        if(!KeyboardFragment.currentNumber.equals("")) {
+            if(KeyboardFragment.currentNumber.equals(Sudoku.boardGame[r][c])) {
+                mainNumber.setText(KeyboardFragment.currentNumber);
+                setBackgroundColor(R.drawable.corner_radius_painted);
+            } else {
+                if(Sudoku.life_counter == 0) {
+                    AlertDialog.gameOver(context);
+                } else {
+                    LifeFragment.setIconImage(LifeFragment.arrayIcon[Sudoku.life_counter], R.drawable.heart_icon_empty);
+                    Sudoku.life_counter = Sudoku.life_counter - 1;
+                }
+            }
+        }
+    }
+
     public void setBackgroundColor(int drawable) {
         layout.setBackgroundResource(drawable);
     }
