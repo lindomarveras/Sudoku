@@ -13,6 +13,7 @@ import android.widget.TextView;
 import com.android.ejemplos.sudoku.R;
 import com.android.ejemplos.sudoku.model.Sudoku;
 import com.android.ejemplos.sudoku.util.AlertDialog;
+import com.android.ejemplos.sudoku.util.Animations;
 
 public class CellFragment extends Fragment {
 
@@ -50,10 +51,10 @@ public class CellFragment extends Fragment {
                 setBackgroundColor(R.drawable.corner_radius_painted);
             } else {
                 if(Sudoku.life_counter == 0) {
-                    LifeFragment.setIconImage(LifeFragment.arrayIcon[Sudoku.life_counter], R.drawable.heart_icon_empty);
+                    Animations.animationHeartEmpty(context, LifeFragment.arrayIcon[Sudoku.life_counter]);
                     AlertDialog.gameOver(context);
                 } else {
-                    LifeFragment.setIconImage(LifeFragment.arrayIcon[Sudoku.life_counter], R.drawable.heart_icon_empty);
+                    Animations.animationHeartEmpty(context, LifeFragment.arrayIcon[Sudoku.life_counter]);
                     Sudoku.life_counter = Sudoku.life_counter - 1;
                 }
             }
