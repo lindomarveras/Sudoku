@@ -50,6 +50,7 @@ public class CellFragment extends Fragment {
                 setBackgroundColor(R.drawable.corner_radius_painted);
             } else {
                 if(Sudoku.life_counter == 0) {
+                    LifeFragment.setIconImage(LifeFragment.arrayIcon[Sudoku.life_counter], R.drawable.heart_icon_empty);
                     AlertDialog.gameOver(context);
                 } else {
                     LifeFragment.setIconImage(LifeFragment.arrayIcon[Sudoku.life_counter], R.drawable.heart_icon_empty);
