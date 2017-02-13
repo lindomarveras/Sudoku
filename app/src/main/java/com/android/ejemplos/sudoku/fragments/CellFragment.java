@@ -1,9 +1,9 @@
 package com.android.ejemplos.sudoku.fragments;
 
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,14 +11,15 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.android.ejemplos.sudoku.R;
-import com.android.ejemplos.sudoku.util.Constants;
 import com.android.ejemplos.sudoku.model.Sudoku;
+import com.android.ejemplos.sudoku.util.AlertDialog;
 
 public class CellFragment extends Fragment {
 
 
     public CellFragment() {
     }
+
     RelativeLayout layout;
     TextView mainNumber;
 
