@@ -47,6 +47,7 @@ public class CellFragment extends Fragment {
     private void checkMove(Context context, int r, int c) {
         if(!KeyboardFragment.currentNumber.equals("")) {
             if(KeyboardFragment.currentNumber.equals(Sudoku.boardGame[r][c])) {
+                Animations.annimationCorrectCell(context, layout);
                 mainNumber.setText(KeyboardFragment.currentNumber);
                 setBackgroundColor(R.drawable.corner_radius_painted);
             } else {

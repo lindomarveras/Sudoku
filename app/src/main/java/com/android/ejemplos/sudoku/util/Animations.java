@@ -4,6 +4,8 @@ import android.content.Context;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.android.ejemplos.sudoku.R;
 
@@ -19,5 +21,11 @@ public class Animations {
         Animation animation = AnimationUtils.loadAnimation(context, R.anim.animation_heart_empty);
         animation.setFillAfter(true);
         image.startAnimation(animation);
+    }
+
+    public static void annimationCorrectCell(Context context, RelativeLayout layout) {
+        Animation animation = AnimationUtils.loadAnimation(context, R.anim.animation_correct_cell);
+        animation.setFillAfter(true);
+        layout.startAnimation(animation);
     }
 }
