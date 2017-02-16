@@ -49,15 +49,15 @@ public class CellFragment extends Fragment {
             if(KeyboardFragment.currentNumber.equals(Sudoku.boardGame[r][c])) {
                 Animations.annimationCorrectCell(context, layout);
                 mainNumber.setText(KeyboardFragment.currentNumber);
-                setBackgroundColor(R.drawable.corner_radius_painted);
+                setBackgroundColor(R.drawable.corner_radius_correct_cell);
             } else {
+                Animations.animationIncorrectCell(context, layout);
+                Animations.animationHeartEmpty(context, LifeFragment.arrayIcon[Sudoku.life_counter]);
+                mainNumber.setText(Sudoku.boardGame[r][c]);
+                setBackgroundColor(R.drawable.corner_radius_incorrect_cell);
                 if(Sudoku.life_counter == 0) {
-                    Animations.animationIncorrectCell(context, layout);
-                    Animations.animationHeartEmpty(context, LifeFragment.arrayIcon[Sudoku.life_counter]);
                     AlertDialog.gameOver(context);
                 } else {
-                    Animations.animationIncorrectCell(context, layout);
-                    Animations.animationHeartEmpty(context, LifeFragment.arrayIcon[Sudoku.life_counter]);
                     Sudoku.life_counter = Sudoku.life_counter - 1;
                 }
             }
