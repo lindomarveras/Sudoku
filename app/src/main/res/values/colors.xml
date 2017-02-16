@@ -11,8 +11,8 @@
     <color name="correct_cell">#e1708c</color>
     <color name="incorrect_cell">#c24d59</color>
 
-    <color name="unselected_button">#C06D87</color>
-    <color name="selected_button">#F2727F</color>
+    <color name="unselected_keyboard_button">#C06D87</color>
+    <color name="selected_keyboard_button">#F2727F</color>
 
     <color name="text_color">#EEEEEE</color>
 </resources>
