@@ -1,5 +1,6 @@
 package com.android.ejemplos.sudoku.activities;
 
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -106,6 +107,7 @@ public class BoardGameActivity extends AppCompatActivity {
     private static TextView textLevel;
 
     private static CellFragment arrayCell[][] = new CellFragment[9][9];
+    private Context context;
 
 
     @Override
@@ -295,12 +297,13 @@ public class BoardGameActivity extends AppCompatActivity {
         arrayCell[8][7] = cell_9_8;
         arrayCell[8][8] = cell_9_9;
 
+        context = getApplicationContext();
         for (int r = 0; r < 9; r++) {
             for (int c = 0; c < 9; c++) {
                 arrayCell[r][c].cellClicked(r, c);
             }
         }
-        Sudoku.generateBoardGame(Constants.MEDIUM_LEVEL_CELL_NUMBER, Constants.MEDIUM_LEVEL_TEXT);
+        Sudoku.generateBoardGame(context, Constants.MEDIUM_LEVEL_CELL_NUMBER, Constants.MEDIUM_LEVEL_TEXT);
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -313,11 +316,11 @@ public class BoardGameActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.menu_level___easy) {
-            Sudoku.generateBoardGame(Constants.EASY_LEVEL_CELL_NUMBER, Constants.EASY_LEVEL_TEXT);
+            Sudoku.generateBoardGame(context, Constants.EASY_LEVEL_CELL_NUMBER, Constants.EASY_LEVEL_TEXT);
         } else if (id == R.id.menu_level___medium) {
-            Sudoku.generateBoardGame(Constants.MEDIUM_LEVEL_CELL_NUMBER, Constants.MEDIUM_LEVEL_TEXT);
+            Sudoku.generateBoardGame(context, Constants.MEDIUM_LEVEL_CELL_NUMBER, Constants.MEDIUM_LEVEL_TEXT);
         } else if(id == R.id.menu_level___hard) {
-            Sudoku.generateBoardGame(Constants.HARD_LEVEL_CELL_NUMBER, Constants.HARD_LEVEL_TEXT);
+            Sudoku.generateBoardGame(context, Constants.HARD_LEVEL_CELL_NUMBER, Constants.HARD_LEVEL_TEXT);
         }
         return super.onOptionsItemSelected(item);
     }

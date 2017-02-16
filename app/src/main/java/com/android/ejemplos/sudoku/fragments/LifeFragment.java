@@ -1,13 +1,16 @@
 package com.android.ejemplos.sudoku.fragments;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
 import android.widget.ImageView;
 
 import com.android.ejemplos.sudoku.R;
+import com.android.ejemplos.sudoku.util.Animations;
 
 public class LifeFragment extends Fragment {
 
@@ -50,9 +53,9 @@ public class LifeFragment extends Fragment {
         return arrayIcon;
     }
 
-    public static void restartIcons() {
+    public static void restartIcons(Context context) {
         for (ImageView icon: arrayIcon) {
-            icon.setImageResource(R.drawable.heart_icon_full);
+            Animations.animationHeartFull(context , icon);
         }
     }
 }
