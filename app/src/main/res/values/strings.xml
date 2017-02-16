@@ -20,4 +20,6 @@
     <string name="fragment_cell_pencil_7">7</string>
     <string name="fragment_cell_pencil_8">8</string>
     <string name="fragment_cell_pencil_9">9</string>
+    <string name="activity_board_game_pencil_text">pencil</string>
+    <string name="activity_board_game_pen_text">pen</string>
 </resources>
