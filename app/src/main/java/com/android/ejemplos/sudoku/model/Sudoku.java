@@ -36,7 +36,7 @@ public class Sudoku {
             int row = rndRow.nextInt(9);
             int colum = rndColum.nextInt(9);
             arrayCellFragment[row][colum].setMainNumber(boardGame[row][colum]);
-            arrayCellFragment[row][colum].setBackgroundColor(R.drawable.corner_radius_painted);
+            arrayCellFragment[row][colum].setBackgroundColor(R.drawable.corner_radius_initial_cell);
         }
     }
 
@@ -44,7 +44,7 @@ public class Sudoku {
         for (int r = 0; r < arrayCellFragment.length; r++) {
             for (int c = 0; c < arrayCellFragment.length; c++) {
                 arrayCellFragment[r][c].setMainNumber("");
-                arrayCellFragment[r][c].setBackgroundColor(R.drawable.corner_radius_unpainted);
+                arrayCellFragment[r][c].setBackgroundColor(R.drawable.corner_radius_unpainted_cell);
             }
         }
     }

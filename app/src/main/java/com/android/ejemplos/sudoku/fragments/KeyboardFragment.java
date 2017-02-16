@@ -69,9 +69,9 @@ public class KeyboardFragment extends Fragment {
     public void setBackgroundColor() {
         for (Button button: arrayButton) {
             if(currentNumber.equals(button.getText().toString())) {
-                button.setBackgroundResource(R.drawable.corner_radius_painted);
+                button.setBackgroundResource(R.drawable.corner_radius_selected_keyboard_button);
             } else {
-                button.setBackgroundResource(R.drawable.corner_radius_unpainted);
+                button.setBackgroundResource(R.drawable.corner_radius_unselected_keyboard_button);
             }
         }
     }
