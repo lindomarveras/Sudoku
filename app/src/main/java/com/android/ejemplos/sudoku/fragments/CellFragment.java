@@ -52,9 +52,11 @@ public class CellFragment extends Fragment {
                 setBackgroundColor(R.drawable.corner_radius_painted);
             } else {
                 if(Sudoku.life_counter == 0) {
+                    Animations.animationIncorrectCell(context, layout);
                     Animations.animationHeartEmpty(context, LifeFragment.arrayIcon[Sudoku.life_counter]);
                     AlertDialog.gameOver(context);
                 } else {
+                    Animations.animationIncorrectCell(context, layout);
                     Animations.animationHeartEmpty(context, LifeFragment.arrayIcon[Sudoku.life_counter]);
                     Sudoku.life_counter = Sudoku.life_counter - 1;
                 }
