@@ -21,4 +21,5 @@
     <dimen name="pen_pencil_button_height">30dp</dimen>
 
     <dimen name="corner_radius_cell">7dp</dimen>
+    <dimen name="chronometer_margin">10dp</dimen>
 </resources>
