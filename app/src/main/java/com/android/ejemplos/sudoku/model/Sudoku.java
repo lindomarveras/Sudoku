@@ -47,6 +47,8 @@ public class Sudoku {
                 arrayCellFragment[r][c].setMainNumber("");
                 arrayCellFragment[r][c].setBackgroundColor(R.drawable.corner_radius_unpainted_cell);
                 arrayCellFragment[r][c].resertPencilCell();
+                arrayCellFragment[r][c].setBooleanPaintedCell(false);
+
             }
         }
     }
