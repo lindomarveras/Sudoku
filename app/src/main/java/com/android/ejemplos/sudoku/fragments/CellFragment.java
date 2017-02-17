@@ -74,46 +74,43 @@ public class CellFragment extends Fragment {
         layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(BoardGameActivity.penPencilOption == Constants.PEN_MODE) {
-                    checkMove(view.getContext(), r, c);
-                } else if(BoardGameActivity.penPencilOption == Constants.PENCIL_MODE) {
-                    pencilMove();
+                if(!KeyboardFragment.currentNumber.equals("") && !booleanPaintedCell) {
+                    if (BoardGameActivity.penPencilOption == Constants.PEN_MODE) {
+                        checkMove(view.getContext(), r, c);
+                    } else if (BoardGameActivity.penPencilOption == Constants.PENCIL_MODE) {
+                        pencilMove();
+                    }
                 }
             }
         });
     }
 
     private void checkMove(Context context, int r, int c) {
-        if(!KeyboardFragment.currentNumber.equals("") && !booleanPaintedCell) {
-            if(KeyboardFragment.currentNumber.equals(Sudoku.boardGame[r][c])) {
-                Animations.annimationCorrectCell(context, layout);
-                mainNumber.setText(KeyboardFragment.currentNumber);
-                setBackgroundColor(R.drawable.corner_radius_correct_cell);
-                setBooleanPaintedCell(true);
+        setBooleanPaintedCell(true);
+        if(KeyboardFragment.currentNumber.equals(Sudoku.boardGame[r][c])) {
+            Animations.annimationCorrectCell(context, layout);
+            mainNumber.setText(KeyboardFragment.currentNumber);
+            setBackgroundColor(R.drawable.corner_radius_correct_cell);
+        } else {
+            Animations.animationIncorrectCell(context, layout);
+            Animations.animationHeartEmpty(context, LifeFragment.arrayIcon[Sudoku.life_counter]);
+            mainNumber.setText(Sudoku.boardGame[r][c]);
+            setBackgroundColor(R.drawable.corner_radius_incorrect_cell);
+            if(Sudoku.life_counter == 0) {
+                AlertDialog.gameOver(context);
             } else {
-                Animations.animationIncorrectCell(context, layout);
-                Animations.animationHeartEmpty(context, LifeFragment.arrayIcon[Sudoku.life_counter]);
-                mainNumber.setText(Sudoku.boardGame[r][c]);
-                setBackgroundColor(R.drawable.corner_radius_incorrect_cell);
-                setBooleanPaintedCell(true);
-                if(Sudoku.life_counter == 0) {
-                    AlertDialog.gameOver(context);
-                } else {
-                    Sudoku.life_counter = Sudoku.life_counter - 1;
-                }
+                Sudoku.life_counter = Sudoku.life_counter - 1;
             }
         }
     }
 
     private void pencilMove() {
-        if(!KeyboardFragment.currentNumber.equals("") && !booleanPaintedCell) {
-            for (int i = 0; i < arrayPencil.length; i++) {
-                if(KeyboardFragment.currentNumber.equals(Integer.toString(i + 1))) {
-                    if(arrayPencil[i].getVisibility() == View.VISIBLE) {
-                        arrayPencil[i].setVisibility(View.INVISIBLE);
-                    } else if(arrayPencil[i].getVisibility() == View.INVISIBLE) {
-                        arrayPencil[i].setVisibility(View.VISIBLE);
-                    }
+        for (int i = 0; i < arrayPencil.length; i++) {
+            if(KeyboardFragment.currentNumber.equals(Integer.toString(i + 1))) {
+                if(arrayPencil[i].getVisibility() == View.VISIBLE) {
+                    arrayPencil[i].setVisibility(View.INVISIBLE);
+                } else if(arrayPencil[i].getVisibility() == View.INVISIBLE) {
+                    arrayPencil[i].setVisibility(View.VISIBLE);
                 }
             }
         }
