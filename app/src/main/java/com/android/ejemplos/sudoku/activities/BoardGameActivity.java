@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.android.ejemplos.sudoku.fragments.CellFragment;
@@ -105,6 +107,8 @@ public class BoardGameActivity extends AppCompatActivity {
     private CellFragment cell_9_9;
 
     private static TextView textLevel;
+    private static Button penPencilButton;
+    public static int penPencilOption = Constants.PEN_MODE;
 
     private static CellFragment arrayCell[][] = new CellFragment[9][9];
     private Context context;
@@ -116,6 +120,7 @@ public class BoardGameActivity extends AppCompatActivity {
         setContentView(R.layout.activity_board_game);
 
         textLevel = (TextView) findViewById(R.id.activity_board_game_level_text);
+        penPencilButton = (Button) findViewById(R.id.activity_board_game_pen_pencil_button);
 
         cell_1_1 = (CellFragment) getSupportFragmentManager().findFragmentById(R.id.activity_board_game_cell_1_1);
         cell_1_2 = (CellFragment) getSupportFragmentManager().findFragmentById(R.id.activity_board_game_cell_1_2);
@@ -303,6 +308,20 @@ public class BoardGameActivity extends AppCompatActivity {
                 arrayCell[r][c].cellClicked(r, c);
             }
         }
+
+        penPencilButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(penPencilOption == Constants.PEN_MODE) {
+                    penPencilOption = Constants.PENCIL_MODE;
+                    penPencilButton.setText(getResources().getString(R.string.activity_board_game_pencil_text));
+                } else if(penPencilOption == Constants.PENCIL_MODE) {
+                    penPencilOption = Constants.PEN_MODE;
+                    penPencilButton.setText(getResources().getString(R.string.activity_board_game_pen_text));
+                }
+            }
+        });
+
         Sudoku.generateBoardGame(context, Constants.MEDIUM_LEVEL_CELL_NUMBER, Constants.MEDIUM_LEVEL_TEXT);
     }
 
