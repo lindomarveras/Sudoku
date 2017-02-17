@@ -8,4 +8,7 @@ public class Constants {
     public static final String EASY_LEVEL_TEXT = "Level: easy";
     public static final String MEDIUM_LEVEL_TEXT = "Level: medium";
     public static final String HARD_LEVEL_TEXT = "Level: hard";
+
+    public static final int PEN_MODE = 0;
+    public static final int PENCIL_MODE = 1;
 }

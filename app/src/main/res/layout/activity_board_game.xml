@@ -680,11 +680,24 @@
    </GridLayout>
 
     <fragment
+        android:id="@+id/activity_board_game_life_fragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:name="com.android.ejemplos.sudoku.fragments.LifeFragment"
         tools:layout="@layout/fragment_life"
         android:layout_above="@+id/activity_board_game_keyboard"/>
+
+   <Button
+       android:id="@+id/activity_board_game_pen_pencil_button"
+       android:layout_above="@id/activity_board_game_keyboard"
+       android:layout_alignParentRight="true"
+       android:layout_width="60dp"
+       android:layout_height="@dimen/pen_pencil_button_height"
+       android:text="@string/activity_board_game_pen_text"
+       android:textColor="@color/text_color"
+       android:layout_margin="@dimen/pen_pencil_button_margin"
+       android:background="@drawable/corner_radius_unselected_keyboard_button"/>
+
     <fragment
         android:id="@+id/activity_board_game_keyboard"
         android:layout_width="wrap_content"
