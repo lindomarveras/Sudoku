@@ -115,6 +115,12 @@ public class CellFragment extends Fragment {
         }
     }
 
+    public void resertPencilCell() {
+        for (TextView pencil: arrayPencil) {
+            pencil.setVisibility(View.INVISIBLE);
+        }
+    }
+
     public void setBackgroundColor(int drawable) {
         layout.setBackgroundResource(drawable);
     }

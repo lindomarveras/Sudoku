@@ -45,6 +45,7 @@ public class Sudoku {
             for (int c = 0; c < arrayCellFragment.length; c++) {
                 arrayCellFragment[r][c].setMainNumber("");
                 arrayCellFragment[r][c].setBackgroundColor(R.drawable.corner_radius_unpainted_cell);
+                arrayCellFragment[r][c].resertPencilCell();
             }
         }
     }
