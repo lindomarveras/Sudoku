@@ -37,6 +37,8 @@ public class CellFragment extends Fragment {
 
     TextView arrayPencil[] = new TextView[9];
 
+    private boolean booleanPaintedCell;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -82,16 +84,18 @@ public class CellFragment extends Fragment {
     }
 
     private void checkMove(Context context, int r, int c) {
-        if(!KeyboardFragment.currentNumber.equals("")) {
+        if(!KeyboardFragment.currentNumber.equals("") && !booleanPaintedCell) {
             if(KeyboardFragment.currentNumber.equals(Sudoku.boardGame[r][c])) {
                 Animations.annimationCorrectCell(context, layout);
                 mainNumber.setText(KeyboardFragment.currentNumber);
                 setBackgroundColor(R.drawable.corner_radius_correct_cell);
+                setBooleanPaintedCell(true);
             } else {
                 Animations.animationIncorrectCell(context, layout);
                 Animations.animationHeartEmpty(context, LifeFragment.arrayIcon[Sudoku.life_counter]);
                 mainNumber.setText(Sudoku.boardGame[r][c]);
                 setBackgroundColor(R.drawable.corner_radius_incorrect_cell);
+                setBooleanPaintedCell(true);
                 if(Sudoku.life_counter == 0) {
                     AlertDialog.gameOver(context);
                 } else {
@@ -102,7 +106,7 @@ public class CellFragment extends Fragment {
     }
 
     private void pencilMove() {
-        if(!KeyboardFragment.currentNumber.equals("")) {
+        if(!KeyboardFragment.currentNumber.equals("") && !booleanPaintedCell) {
             for (int i = 0; i < arrayPencil.length; i++) {
                 if(KeyboardFragment.currentNumber.equals(Integer.toString(i + 1))) {
                     if(arrayPencil[i].getVisibility() == View.VISIBLE) {
@@ -127,5 +131,13 @@ public class CellFragment extends Fragment {
 
     public void setMainNumber(String number) {
         mainNumber.setText(number);
+    }
+
+    public void setBooleanPaintedCell(boolean booleanPaintedCell) {
+        this.booleanPaintedCell = booleanPaintedCell;
+    }
+
+    public boolean isBooleanPaintedCell() {
+        return booleanPaintedCell;
     }
 }
