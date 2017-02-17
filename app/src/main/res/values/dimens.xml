@@ -19,4 +19,6 @@
     <dimen name="pencil_text_size">8sp</dimen>
     <dimen name="pen_pencil_button_margin">5dp</dimen>
     <dimen name="pen_pencil_button_height">30dp</dimen>
+
+    <dimen name="corner_radius_cell">7dp</dimen>
 </resources>
