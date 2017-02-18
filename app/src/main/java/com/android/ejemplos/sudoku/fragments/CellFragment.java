@@ -85,7 +85,7 @@ public class CellFragment extends Fragment {
 
     private void penMove(Context context, int r, int c) {
         setBooleanPaintedCell(true);
-        resertPencilCell();
+        resetPencilCell();
         if(Sudoku.completedBoardGame(BoardGameActivity.getArrayCellFragment())) {
             AlertDialog.winner(context);
             BoardGameActivity.chronometer.stop();
@@ -120,7 +120,7 @@ public class CellFragment extends Fragment {
         }
     }
 
-    public void resertPencilCell() {
+    public void resetPencilCell() {
         for (TextView pencil: arrayPencil) {
             pencil.setVisibility(View.INVISIBLE);
         }
