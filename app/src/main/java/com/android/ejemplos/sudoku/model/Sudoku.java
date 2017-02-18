@@ -66,4 +66,12 @@ public class Sudoku {
         }
         return completedBoardGame;
     }
+
+    public static void setPaintedCellOptionToFalseInBoardBame(CellFragment[][] arrayCellFragment) {
+        for (int r = 0; r < arrayCellFragment.length; r++) {
+            for (int c = 0; c < arrayCellFragment.length; c++) {
+                arrayCellFragment[r][c].setBooleanPaintedCell(true);
+            }
+        }
+    }
 }

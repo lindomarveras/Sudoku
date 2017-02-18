@@ -101,6 +101,7 @@ public class CellFragment extends Fragment {
             setBackgroundColor(R.drawable.corner_radius_incorrect_cell);
             if(Sudoku.life_counter == 0) {
                 AlertDialog.gameOver(context);
+                Sudoku.setPaintedCellOptionToFalseInBoardBame(BoardGameActivity.getArrayCellFragment());
                 BoardGameActivity.chronometer.stop();
             } else {
                 Sudoku.life_counter = Sudoku.life_counter - 1;
