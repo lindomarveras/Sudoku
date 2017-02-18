@@ -88,6 +88,10 @@ public class CellFragment extends Fragment {
     private void checkMove(Context context, int r, int c) {
         setBooleanPaintedCell(true);
         resertPencilCell();
+        if(Sudoku.completedBoardGame(BoardGameActivity.getArrayCellFragment())) {
+            AlertDialog.winner(context);
+            BoardGameActivity.chronometer.stop();
+        }
         if(KeyboardFragment.currentNumber.equals(Sudoku.boardGame[r][c])) {
             Animations.annimationCorrectCell(context, layout);
             mainNumber.setText(KeyboardFragment.currentNumber);
@@ -99,6 +103,8 @@ public class CellFragment extends Fragment {
             setBackgroundColor(R.drawable.corner_radius_incorrect_cell);
             if(Sudoku.life_counter == 0) {
                 AlertDialog.gameOver(context);
+                BoardGameActivity.chronometer.stop();
+
             } else {
                 Sudoku.life_counter = Sudoku.life_counter - 1;
             }

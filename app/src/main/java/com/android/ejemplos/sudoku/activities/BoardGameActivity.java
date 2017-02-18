@@ -327,7 +327,7 @@ public class BoardGameActivity extends AppCompatActivity {
             }
         });
 
-        chronometer.start();
+
         Sudoku.generateBoardGame(context, Constants.MEDIUM_LEVEL_CELL_NUMBER, Constants.MEDIUM_LEVEL_TEXT);
     }
 
