@@ -36,11 +36,11 @@ public class Sudoku {
         Random rndRow = new Random();
         Random rndColum = new Random();
         for (int i = 0; i < numberOfCells; i++) {
-            int row = rndRow.nextInt(9);
-            int colum = rndColum.nextInt(9);
-            arrayCellFragment[row][colum].setMainNumber(boardGame[row][colum]);
-            arrayCellFragment[row][colum].setBackgroundColor(R.drawable.corner_radius_initial_cell);
-            arrayCellFragment[row][colum].setBooleanPaintedCell(true);
+            int r = rndRow.nextInt(9);
+            int c = rndColum.nextInt(9);
+            arrayCellFragment[r][c].setMainNumber(boardGame[r][c]);
+            arrayCellFragment[r][c].setBackgroundColor(R.drawable.corner_radius_initial_cell);
+            arrayCellFragment[r][c].setBooleanPaintedCell(true);
         }
     }
 
