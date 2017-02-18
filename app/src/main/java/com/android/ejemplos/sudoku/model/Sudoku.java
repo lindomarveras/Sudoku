@@ -55,4 +55,16 @@ public class Sudoku {
             }
         }
     }
+
+    public static boolean completedBoardGame(CellFragment[][] arrayCellFragment) {
+        boolean completedBoardGame = true;
+        for (int r = 0; r < arrayCellFragment.length; r++) {
+            for (int c = 0; c < arrayCellFragment.length; c++) {
+                if(!arrayCellFragment[r][c].isBooleanPaintedCell()) {
+                    completedBoardGame = false;
+                }
+            }
+        }
+        return completedBoardGame;
+    }
 }
