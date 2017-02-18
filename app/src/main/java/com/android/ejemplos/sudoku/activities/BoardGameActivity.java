@@ -1,6 +1,7 @@
 package com.android.ejemplos.sudoku.activities;
 
 import android.content.Context;
+import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -115,6 +116,7 @@ public class BoardGameActivity extends AppCompatActivity {
     private static CellFragment arrayCell[][] = new CellFragment[9][9];
     private Context context;
 
+    private long lastStopTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -327,6 +329,25 @@ public class BoardGameActivity extends AppCompatActivity {
 
         chronometer.start();
         Sudoku.generateBoardGame(context, Constants.MEDIUM_LEVEL_CELL_NUMBER, Constants.MEDIUM_LEVEL_TEXT);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        chronometer.stop();
+        lastStopTime = SystemClock.elapsedRealtime();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (lastStopTime == 0) {    // On first start
+            chronometer.setBase(SystemClock.elapsedRealtime());
+        } else {                    // On resume after pause
+            long intervalOnPause = (SystemClock.elapsedRealtime() - lastStopTime);
+            chronometer.setBase(chronometer.getBase() + intervalOnPause);
+        }
+        chronometer.start();
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
