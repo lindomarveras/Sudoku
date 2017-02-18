@@ -72,18 +72,18 @@ public class CellFragment extends Fragment {
         layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(!KeyboardFragment.currentNumber.equals("") && !booleanPaintedCell) {
-                    if (BoardGameActivity.penPencilOption == Constants.PEN_MODE) {
-                        checkMove(view.getContext(), r, c);
-                    } else if (BoardGameActivity.penPencilOption == Constants.PENCIL_MODE) {
-                        pencilMove();
-                    }
+            if(!KeyboardFragment.currentNumber.equals("") && !booleanPaintedCell) {
+                if (BoardGameActivity.penPencilOption == Constants.PEN_MODE) {
+                    penMove(view.getContext(), r, c);
+                } else if (BoardGameActivity.penPencilOption == Constants.PENCIL_MODE) {
+                    pencilMove();
                 }
+            }
             }
         });
     }
 
-    private void checkMove(Context context, int r, int c) {
+    private void penMove(Context context, int r, int c) {
         setBooleanPaintedCell(true);
         resertPencilCell();
         if(Sudoku.completedBoardGame(BoardGameActivity.getArrayCellFragment())) {
