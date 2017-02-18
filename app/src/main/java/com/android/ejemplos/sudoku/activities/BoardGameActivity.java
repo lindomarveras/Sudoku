@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Chronometer;
 import android.widget.TextView;
 
 import com.android.ejemplos.sudoku.fragments.CellFragment;
@@ -109,6 +110,7 @@ public class BoardGameActivity extends AppCompatActivity {
     private static TextView textLevel;
     private static Button penPencilButton;
     public static int penPencilOption = Constants.PEN_MODE;
+    public static Chronometer chronometer;
 
     private static CellFragment arrayCell[][] = new CellFragment[9][9];
     private Context context;
@@ -121,6 +123,7 @@ public class BoardGameActivity extends AppCompatActivity {
 
         textLevel = (TextView) findViewById(R.id.activity_board_game_level_text);
         penPencilButton = (Button) findViewById(R.id.activity_board_game_pen_pencil_button);
+        chronometer = (Chronometer) findViewById(R.id.activity_board_game___chronometer);
 
         cell_1_1 = (CellFragment) getSupportFragmentManager().findFragmentById(R.id.activity_board_game_cell_1_1);
         cell_1_2 = (CellFragment) getSupportFragmentManager().findFragmentById(R.id.activity_board_game_cell_1_2);
@@ -322,6 +325,7 @@ public class BoardGameActivity extends AppCompatActivity {
             }
         });
 
+        chronometer.start();
         Sudoku.generateBoardGame(context, Constants.MEDIUM_LEVEL_CELL_NUMBER, Constants.MEDIUM_LEVEL_TEXT);
     }
 

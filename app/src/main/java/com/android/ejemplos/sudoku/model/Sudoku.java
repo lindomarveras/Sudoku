@@ -1,6 +1,7 @@
 package com.android.ejemplos.sudoku.model;
 
 import android.content.Context;
+import android.os.SystemClock;
 
 import com.android.ejemplos.sudoku.R;
 import com.android.ejemplos.sudoku.activities.BoardGameActivity;
@@ -27,6 +28,7 @@ public class Sudoku {
         LifeFragment.restartIcons(context);
         life_counter = 4;
         BoardGameActivity.setTextLevel(level);
+        BoardGameActivity.chronometer.setBase(SystemClock.elapsedRealtime());
     }
 
     private static void printRandomNumberInBoardGame(CellFragment[][] arrayCellFragment, String[][] boardGame, int numberOfCells) {
