@@ -9,7 +9,6 @@ import com.android.ejemplos.sudoku.model.Sudoku;
 public class AlertDialog {
 
     public static void gameOver(final Context context) {
-
         android.support.v7.app.AlertDialog.Builder dialog = new android.support.v7.app.AlertDialog.Builder(context);
 
         dialog.setTitle("Game over");

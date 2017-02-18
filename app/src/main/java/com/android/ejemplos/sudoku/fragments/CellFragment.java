@@ -1,6 +1,5 @@
 package com.android.ejemplos.sudoku.fragments;
 
-
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -40,8 +39,7 @@ public class CellFragment extends Fragment {
     private boolean booleanPaintedCell;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_cell, container, false);
 
         mainNumber = (TextView) view.findViewById(R.id.frament_cell___main_number);
@@ -104,7 +102,6 @@ public class CellFragment extends Fragment {
             if(Sudoku.life_counter == 0) {
                 AlertDialog.gameOver(context);
                 BoardGameActivity.chronometer.stop();
-
             } else {
                 Sudoku.life_counter = Sudoku.life_counter - 1;
             }
