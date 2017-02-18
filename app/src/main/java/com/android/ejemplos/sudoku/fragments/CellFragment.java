@@ -22,8 +22,6 @@ public class CellFragment extends Fragment {
     public CellFragment() {
     }
 
-    RelativeLayout layout;
-    TextView mainNumber;
     TextView pencil1;
     TextView pencil2;
     TextView pencil3;
@@ -35,6 +33,8 @@ public class CellFragment extends Fragment {
     TextView pencil9;
 
     TextView arrayPencil[] = new TextView[9];
+    RelativeLayout layout;
+    TextView mainNumber;
 
     private boolean booleanPaintedCell;
 
