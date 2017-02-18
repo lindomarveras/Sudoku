@@ -89,6 +89,10 @@ public class CellFragment extends Fragment {
         if(Sudoku.completedBoardGame(BoardGameActivity.getArrayCellFragment())) {
             AlertDialog.winner(context);
             BoardGameActivity.chronometer.stop();
+            BoardGameActivity.penPencilButton.setText(R.string.activity_board_game_pen_text);
+            BoardGameActivity.penPencilButton.setEnabled(false);
+            KeyboardFragment.resetKeyboard();
+            KeyboardFragment.setEnabledKeyboard(false);
         }
         if(KeyboardFragment.currentNumber.equals(Sudoku.boardGame[r][c])) {
             Animations.annimationCorrectCell(context, layout);
@@ -103,6 +107,10 @@ public class CellFragment extends Fragment {
                 AlertDialog.gameOver(context);
                 Sudoku.setPaintedCellOptionToFalseInBoardBame(BoardGameActivity.getArrayCellFragment());
                 BoardGameActivity.chronometer.stop();
+                BoardGameActivity.penPencilButton.setText(R.string.activity_board_game_pen_text);
+                BoardGameActivity.penPencilButton.setEnabled(false);
+                KeyboardFragment.resetKeyboard();
+                KeyboardFragment.setEnabledKeyboard(false);
             } else {
                 Sudoku.life_counter = Sudoku.life_counter - 1;
             }
