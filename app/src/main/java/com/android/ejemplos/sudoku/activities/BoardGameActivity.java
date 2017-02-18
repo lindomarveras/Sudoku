@@ -109,7 +109,7 @@ public class BoardGameActivity extends AppCompatActivity {
     private CellFragment cell_9_9;
 
     private static TextView textLevel;
-    private static Button penPencilButton;
+    public static Button penPencilButton;
     public static int penPencilOption = Constants.PEN_MODE;
     public static Chronometer chronometer;
 

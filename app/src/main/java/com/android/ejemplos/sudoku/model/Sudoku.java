@@ -31,6 +31,8 @@ public class Sudoku {
         BoardGameActivity.setTextLevel(level);
         BoardGameActivity.chronometer.setBase(SystemClock.elapsedRealtime());
         BoardGameActivity.chronometer.start();
+        BoardGameActivity.penPencilButton.setText(R.string.activity_board_game_pen_text);
+        BoardGameActivity.penPencilButton.setEnabled(true);
         KeyboardFragment.resetKeyboard();
         KeyboardFragment.setEnabledKeyboard(true);
     }
