@@ -1,6 +1,5 @@
 package com.android.ejemplos.sudoku.fragments;
 
-
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -23,8 +22,6 @@ public class CellFragment extends Fragment {
     public CellFragment() {
     }
 
-    RelativeLayout layout;
-    TextView mainNumber;
     TextView pencil1;
     TextView pencil2;
     TextView pencil3;
@@ -36,12 +33,13 @@ public class CellFragment extends Fragment {
     TextView pencil9;
 
     TextView arrayPencil[] = new TextView[9];
+    RelativeLayout layout;
+    TextView mainNumber;
 
     private boolean booleanPaintedCell;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_cell, container, false);
 
         mainNumber = (TextView) view.findViewById(R.id.frament_cell___main_number);
@@ -74,20 +72,20 @@ public class CellFragment extends Fragment {
         layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(!KeyboardFragment.currentNumber.equals("") && !booleanPaintedCell) {
-                    if (BoardGameActivity.penPencilOption == Constants.PEN_MODE) {
-                        checkMove(view.getContext(), r, c);
-                    } else if (BoardGameActivity.penPencilOption == Constants.PENCIL_MODE) {
-                        pencilMove();
-                    }
+            if(!KeyboardFragment.currentNumber.equals("") && !booleanPaintedCell) {
+                if (BoardGameActivity.penPencilOption == Constants.PEN_MODE) {
+                    penMove(view.getContext(), r, c);
+                } else if (BoardGameActivity.penPencilOption == Constants.PENCIL_MODE) {
+                    pencilMove();
                 }
+            }
             }
         });
     }
 
-    private void checkMove(Context context, int r, int c) {
+    private void penMove(Context context, int r, int c) {
         setBooleanPaintedCell(true);
-        resertPencilCell();
+        resetPencilCell();
         if(Sudoku.completedBoardGame(BoardGameActivity.getArrayCellFragment())) {
             AlertDialog.winner(context);
             BoardGameActivity.chronometer.stop();
@@ -104,7 +102,6 @@ public class CellFragment extends Fragment {
             if(Sudoku.life_counter == 0) {
                 AlertDialog.gameOver(context);
                 BoardGameActivity.chronometer.stop();
-
             } else {
                 Sudoku.life_counter = Sudoku.life_counter - 1;
             }
@@ -123,7 +120,7 @@ public class CellFragment extends Fragment {
         }
     }
 
-    public void resertPencilCell() {
+    public void resetPencilCell() {
         for (TextView pencil: arrayPencil) {
             pencil.setVisibility(View.INVISIBLE);
         }

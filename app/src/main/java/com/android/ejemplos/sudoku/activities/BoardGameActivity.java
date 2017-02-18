@@ -1,8 +1,8 @@
 package com.android.ejemplos.sudoku.activities;
 
 import android.content.Context;
-import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
+import android.os.SystemClock;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -326,7 +326,6 @@ public class BoardGameActivity extends AppCompatActivity {
                 }
             }
         });
-
 
         Sudoku.generateBoardGame(context, Constants.MEDIUM_LEVEL_CELL_NUMBER, Constants.MEDIUM_LEVEL_TEXT);
     }

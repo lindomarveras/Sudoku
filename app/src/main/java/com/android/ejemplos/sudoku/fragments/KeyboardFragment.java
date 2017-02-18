@@ -9,10 +9,10 @@ import android.widget.Button;
 
 import com.android.ejemplos.sudoku.R;
 
-
 public class KeyboardFragment extends Fragment {
 
     static String currentNumber = "";
+
     Button button1;
     Button button2;
     Button button3;
