@@ -23,7 +23,7 @@ public class KeyboardFragment extends Fragment {
     Button button8;
     Button button9;
 
-    Button arrayButton[] = new Button[9];
+    public static Button arrayButton[] = new Button[9];
 
     public KeyboardFragment() {
     }
@@ -73,6 +73,19 @@ public class KeyboardFragment extends Fragment {
             } else {
                 button.setBackgroundResource(R.drawable.corner_radius_unselected_keyboard_button);
             }
+        }
+    }
+
+    public static void resetKeyboard() {
+        currentNumber = "";
+        for (Button button: arrayButton) {
+            button.setBackgroundResource(R.drawable.corner_radius_unselected_keyboard_button);
+        }
+    }
+
+    public static void setEnabledKeyboard(Boolean bool) {
+        for (Button button: arrayButton) {
+            button.setEnabled(bool);
         }
     }
 }
