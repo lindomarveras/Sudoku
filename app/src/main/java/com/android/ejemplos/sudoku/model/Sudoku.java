@@ -29,6 +29,7 @@ public class Sudoku {
         life_counter = 4;
         BoardGameActivity.setTextLevel(level);
         BoardGameActivity.chronometer.setBase(SystemClock.elapsedRealtime());
+        BoardGameActivity.chronometer.start();
     }
 
     private static void printRandomNumberInBoardGame(CellFragment[][] arrayCellFragment, String[][] boardGame, int numberOfCells) {
