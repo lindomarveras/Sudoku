@@ -12,7 +12,6 @@ import android.widget.TextView;
 import com.android.ejemplos.sudoku.R;
 import com.android.ejemplos.sudoku.activities.BoardGameActivity;
 import com.android.ejemplos.sudoku.model.Sudoku;
-import com.android.ejemplos.sudoku.util.AlertDialog;
 import com.android.ejemplos.sudoku.util.Animations;
 import com.android.ejemplos.sudoku.util.Constants;
 
@@ -87,12 +86,7 @@ public class CellFragment extends Fragment {
         setBooleanPaintedCell(true);
         resetPencilCell();
         if(Sudoku.completedBoardGame(BoardGameActivity.getArrayCellFragment())) {
-            AlertDialog.winner(context);
-            BoardGameActivity.chronometer.stop();
-            BoardGameActivity.penPencilButton.setText(R.string.activity_board_game_pen_text);
-            BoardGameActivity.penPencilButton.setEnabled(false);
-            KeyboardFragment.resetKeyboard();
-            KeyboardFragment.setEnabledKeyboard(false);
+            Sudoku.winGame(context);
         }
         if(KeyboardFragment.currentNumber.equals(Sudoku.boardGame[r][c])) {
             Animations.annimationCorrectCell(context, layout);
@@ -104,13 +98,7 @@ public class CellFragment extends Fragment {
             mainNumber.setText(Sudoku.boardGame[r][c]);
             setBackgroundColor(R.drawable.corner_radius_incorrect_cell);
             if(Sudoku.life_counter == 0) {
-                AlertDialog.gameOver(context);
-                Sudoku.setPaintedCellOptionToFalseInBoardBame(BoardGameActivity.getArrayCellFragment());
-                BoardGameActivity.chronometer.stop();
-                BoardGameActivity.penPencilButton.setText(R.string.activity_board_game_pen_text);
-                BoardGameActivity.penPencilButton.setEnabled(false);
-                KeyboardFragment.resetKeyboard();
-                KeyboardFragment.setEnabledKeyboard(false);
+                Sudoku.loseGame(context);
             } else {
                 Sudoku.life_counter = Sudoku.life_counter - 1;
             }

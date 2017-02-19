@@ -8,6 +8,9 @@ import com.android.ejemplos.sudoku.activities.BoardGameActivity;
 import com.android.ejemplos.sudoku.fragments.CellFragment;
 import com.android.ejemplos.sudoku.fragments.KeyboardFragment;
 import com.android.ejemplos.sudoku.fragments.LifeFragment;
+import com.android.ejemplos.sudoku.util.AlertDialog;
+import com.android.ejemplos.sudoku.util.Animations;
+
 import java.util.Random;
 
 public class Sudoku {
@@ -78,5 +81,24 @@ public class Sudoku {
                 arrayCellFragment[r][c].setBooleanPaintedCell(true);
             }
         }
+    }
+
+    public static void winGame(Context context) {
+        AlertDialog.winner(context);
+        BoardGameActivity.chronometer.stop();
+        BoardGameActivity.penPencilButton.setText(R.string.activity_board_game_pen_text);
+        BoardGameActivity.penPencilButton.setEnabled(false);
+        KeyboardFragment.resetKeyboard();
+        KeyboardFragment.setEnabledKeyboard(false);
+    }
+
+    public static void loseGame(Context context) {
+        AlertDialog.gameOver(context);
+        Sudoku.setPaintedCellOptionToFalseInBoardBame(BoardGameActivity.getArrayCellFragment());
+        BoardGameActivity.chronometer.stop();
+        BoardGameActivity.penPencilButton.setText(R.string.activity_board_game_pen_text);
+        BoardGameActivity.penPencilButton.setEnabled(false);
+        KeyboardFragment.resetKeyboard();
+        KeyboardFragment.setEnabledKeyboard(false);
     }
 }
