@@ -9,7 +9,6 @@ import com.android.ejemplos.sudoku.fragments.CellFragment;
 import com.android.ejemplos.sudoku.fragments.KeyboardFragment;
 import com.android.ejemplos.sudoku.fragments.LifeFragment;
 import com.android.ejemplos.sudoku.util.AlertDialog;
-import com.android.ejemplos.sudoku.util.Animations;
 
 import java.util.Random;
 

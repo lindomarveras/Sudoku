@@ -30,12 +30,10 @@ public class CellFragment extends Fragment {
     TextView pencil7;
     TextView pencil8;
     TextView pencil9;
-
-    TextView arrayPencil[] = new TextView[9];
-    RelativeLayout layout;
     TextView mainNumber;
+    RelativeLayout layout;
 
-    Sudoku sudoku = new Sudoku();
+    private TextView arrayPencil[] = new TextView[9];
     private boolean booleanPaintedCell;
 
     @Override
