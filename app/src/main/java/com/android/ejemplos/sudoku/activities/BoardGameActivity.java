@@ -108,6 +108,8 @@ public class BoardGameActivity extends AppCompatActivity {
     private CellFragment cell_9_8;
     private CellFragment cell_9_9;
 
+    Sudoku sudoku = new Sudoku();
+
     private static TextView textLevel;
     public static Button penPencilButton;
     public static int penPencilOption = Constants.PEN_MODE;
@@ -326,8 +328,7 @@ public class BoardGameActivity extends AppCompatActivity {
                 }
             }
         });
-
-        Sudoku.generateBoardGame(context, Constants.MEDIUM_LEVEL_CELL_NUMBER, Constants.MEDIUM_LEVEL_TEXT);
+        sudoku.generateBoardGame(context, Constants.MEDIUM_LEVEL_CELL_NUMBER, Constants.MEDIUM_LEVEL_TEXT);
     }
 
     @Override
@@ -359,11 +360,11 @@ public class BoardGameActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.menu_level___easy) {
-            Sudoku.generateBoardGame(context, Constants.EASY_LEVEL_CELL_NUMBER, Constants.EASY_LEVEL_TEXT);
+            sudoku.generateBoardGame(context, Constants.EASY_LEVEL_CELL_NUMBER, Constants.EASY_LEVEL_TEXT);
         } else if (id == R.id.menu_level___medium) {
-            Sudoku.generateBoardGame(context, Constants.MEDIUM_LEVEL_CELL_NUMBER, Constants.MEDIUM_LEVEL_TEXT);
+            sudoku.generateBoardGame(context, Constants.MEDIUM_LEVEL_CELL_NUMBER, Constants.MEDIUM_LEVEL_TEXT);
         } else if(id == R.id.menu_level___hard) {
-            Sudoku.generateBoardGame(context, Constants.HARD_LEVEL_CELL_NUMBER, Constants.HARD_LEVEL_TEXT);
+            sudoku.generateBoardGame(context, Constants.HARD_LEVEL_CELL_NUMBER, Constants.HARD_LEVEL_TEXT);
         }
         return super.onOptionsItemSelected(item);
     }

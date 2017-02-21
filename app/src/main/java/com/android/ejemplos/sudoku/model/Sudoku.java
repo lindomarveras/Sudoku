@@ -25,7 +25,7 @@ public class Sudoku {
                                           {"1", "5", "4", "7", "9", "6", "8", "2", "3"},
                                           {"2", "3", "9", "8", "4", "1", "5", "6", "7"}};
 
-    public static void generateBoardGame(Context context, int numberOfCells, String level) {
+    public void generateBoardGame(Context context, int numberOfCells, String level) {
         CellFragment[][] arrayCellFragment = BoardGameActivity.getArrayCellFragment();
         clearBoardGame(arrayCellFragment);
         printRandomNumberInBoardGame(arrayCellFragment, boardGame, numberOfCells);
