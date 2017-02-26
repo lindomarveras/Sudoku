@@ -84,7 +84,7 @@ public class CellFragment extends Fragment {
     private void penMove(Sudoku sudoku, Context context, int r, int c) {
         setBooleanPaintedCell(true);
         resetPencilCell();
-        if(sudoku.completedBoardGame(BoardGameActivity.getArrayCellFragment())) {
+        if(BoardGameFragment.completedBoardGame(BoardGameFragment.getArrayCell())) {
             sudoku.winGame(context);
         }
         if(KeyboardFragment.currentNumber.equals(sudoku.getBoardGame()[r][c])) {
