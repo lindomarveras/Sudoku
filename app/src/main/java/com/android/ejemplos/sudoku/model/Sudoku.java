@@ -6,12 +6,9 @@ import android.os.SystemClock;
 import com.android.ejemplos.sudoku.R;
 import com.android.ejemplos.sudoku.activities.BoardGameActivity;
 import com.android.ejemplos.sudoku.fragments.BoardGameFragment;
-import com.android.ejemplos.sudoku.fragments.CellFragment;
 import com.android.ejemplos.sudoku.fragments.KeyboardFragment;
 import com.android.ejemplos.sudoku.fragments.LifeFragment;
 import com.android.ejemplos.sudoku.util.AlertDialog;
-
-import java.util.Random;
 
 public class Sudoku {
     private int lifeCounter = 4;
@@ -67,9 +64,5 @@ public class Sudoku {
 
     public static String[][] getBoardGame() {
         return boardGame;
-    }
-
-    public void setBoardGame(String[][] boardGame) {
-        this.boardGame = boardGame;
     }
 }

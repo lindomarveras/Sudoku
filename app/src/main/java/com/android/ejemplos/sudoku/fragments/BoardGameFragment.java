@@ -1,15 +1,12 @@
 package com.android.ejemplos.sudoku.fragments;
 
-import android.content.Context;
 import android.os.Bundle;
-import android.os.SystemClock;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.android.ejemplos.sudoku.R;
-import com.android.ejemplos.sudoku.activities.BoardGameActivity;
 import com.android.ejemplos.sudoku.model.Sudoku;
 
 import java.util.Random;

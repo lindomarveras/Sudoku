@@ -11,8 +11,6 @@ import android.widget.Button;
 import android.widget.Chronometer;
 import android.widget.TextView;
 
-import com.android.ejemplos.sudoku.fragments.BoardGameFragment;
-import com.android.ejemplos.sudoku.fragments.CellFragment;
 import com.android.ejemplos.sudoku.R;
 import com.android.ejemplos.sudoku.util.Constants;
 import com.android.ejemplos.sudoku.model.Sudoku;
