@@ -4,7 +4,7 @@ import android.content.Context;
 import android.os.SystemClock;
 
 import com.android.ejemplos.sudoku.R;
-import com.android.ejemplos.sudoku.activities.BoardGameActivity;
+import com.android.ejemplos.sudoku.activities.GameActivity;
 import com.android.ejemplos.sudoku.fragments.BoardGameFragment;
 import com.android.ejemplos.sudoku.fragments.KeyboardFragment;
 import com.android.ejemplos.sudoku.fragments.LifeFragment;
@@ -26,20 +26,20 @@ public class Sudoku {
         BoardGameFragment.generateBoardGame(numberOfCells);
         LifeFragment.restartIcons(context);
         lifeCounter = 4;
-        BoardGameActivity.setTextLevel(level);
-        BoardGameActivity.chronometer.setBase(SystemClock.elapsedRealtime());
-        BoardGameActivity.chronometer.start();
-        BoardGameActivity.penPencilButton.setText(R.string.activity_board_game_pen_text);
-        BoardGameActivity.penPencilButton.setEnabled(true);
+        GameActivity.setTextLevel(level);
+        GameActivity.chronometer.setBase(SystemClock.elapsedRealtime());
+        GameActivity.chronometer.start();
+        GameActivity.penPencilButton.setText(R.string.activity_board_game_pen_text);
+        GameActivity.penPencilButton.setEnabled(true);
         KeyboardFragment.resetKeyboard();
         KeyboardFragment.setEnabledKeyboard(true);
     }
 
     public void winGame(Context context) {
         AlertDialog.winner(context);
-        BoardGameActivity.chronometer.stop();
-        BoardGameActivity.penPencilButton.setText(R.string.activity_board_game_pen_text);
-        BoardGameActivity.penPencilButton.setEnabled(false);
+        GameActivity.chronometer.stop();
+        GameActivity.penPencilButton.setText(R.string.activity_board_game_pen_text);
+        GameActivity.penPencilButton.setEnabled(false);
         KeyboardFragment.resetKeyboard();
         KeyboardFragment.setEnabledKeyboard(false);
     }
@@ -47,9 +47,9 @@ public class Sudoku {
     public void loseGame(Context context) {
         AlertDialog.gameOver(context);
         BoardGameFragment.setPaintedCellOptionToFalseInBoardBame(BoardGameFragment.getArrayCell());
-        BoardGameActivity.chronometer.stop();
-        BoardGameActivity.penPencilButton.setText(R.string.activity_board_game_pen_text);
-        BoardGameActivity.penPencilButton.setEnabled(false);
+        GameActivity.chronometer.stop();
+        GameActivity.penPencilButton.setText(R.string.activity_board_game_pen_text);
+        GameActivity.penPencilButton.setEnabled(false);
         KeyboardFragment.resetKeyboard();
         KeyboardFragment.setEnabledKeyboard(false);
     }

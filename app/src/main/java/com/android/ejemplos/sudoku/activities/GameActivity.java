@@ -15,7 +15,7 @@ import com.android.ejemplos.sudoku.R;
 import com.android.ejemplos.sudoku.util.Constants;
 import com.android.ejemplos.sudoku.model.Sudoku;
 
-public class BoardGameActivity extends AppCompatActivity {
+public class GameActivity extends AppCompatActivity {
 
     Sudoku sudoku = new Sudoku();
 

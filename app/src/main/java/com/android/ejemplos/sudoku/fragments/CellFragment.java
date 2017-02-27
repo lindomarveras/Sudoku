@@ -10,7 +10,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.android.ejemplos.sudoku.R;
-import com.android.ejemplos.sudoku.activities.BoardGameActivity;
+import com.android.ejemplos.sudoku.activities.GameActivity;
 import com.android.ejemplos.sudoku.model.Sudoku;
 import com.android.ejemplos.sudoku.util.Animations;
 import com.android.ejemplos.sudoku.util.Constants;
@@ -71,9 +71,9 @@ public class CellFragment extends Fragment {
             @Override
             public void onClick(View view) {
             if(!KeyboardFragment.currentNumber.equals("") && !booleanPaintedCell) {
-                if (BoardGameActivity.penPencilOption == Constants.PEN_MODE) {
+                if (GameActivity.penPencilOption == Constants.PEN_MODE) {
                     penMove(sudoku, view.getContext(), r, c);
-                } else if (BoardGameActivity.penPencilOption == Constants.PENCIL_MODE) {
+                } else if (GameActivity.penPencilOption == Constants.PENCIL_MODE) {
                     pencilMove();
                 }
             }
