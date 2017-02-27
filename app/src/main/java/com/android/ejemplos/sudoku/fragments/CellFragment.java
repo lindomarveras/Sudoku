@@ -10,7 +10,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.android.ejemplos.sudoku.R;
-import com.android.ejemplos.sudoku.activities.BoardGameActivity;
+import com.android.ejemplos.sudoku.activities.GameActivity;
 import com.android.ejemplos.sudoku.model.Sudoku;
 import com.android.ejemplos.sudoku.util.Animations;
 import com.android.ejemplos.sudoku.util.Constants;
@@ -30,11 +30,10 @@ public class CellFragment extends Fragment {
     TextView pencil7;
     TextView pencil8;
     TextView pencil9;
-
-    TextView arrayPencil[] = new TextView[9];
-    RelativeLayout layout;
     TextView mainNumber;
+    RelativeLayout layout;
 
+    private TextView arrayPencil[] = new TextView[9];
     private boolean booleanPaintedCell;
 
     @Override
@@ -67,14 +66,14 @@ public class CellFragment extends Fragment {
         return view;
     }
 
-    public void cellClicked(final int r, final int c) {
+    public void cellClicked(final Sudoku sudoku, final int r, final int c) {
         layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
             if(!KeyboardFragment.currentNumber.equals("") && !booleanPaintedCell) {
-                if (BoardGameActivity.penPencilOption == Constants.PEN_MODE) {
-                    penMove(view.getContext(), r, c);
-                } else if (BoardGameActivity.penPencilOption == Constants.PENCIL_MODE) {
+                if (GameActivity.penPencilOption == Constants.PEN_MODE) {
+                    penMove(sudoku, view.getContext(), r, c);
+                } else if (GameActivity.penPencilOption == Constants.PENCIL_MODE) {
                     pencilMove();
                 }
             }
@@ -82,25 +81,25 @@ public class CellFragment extends Fragment {
         });
     }
 
-    private void penMove(Context context, int r, int c) {
+    private void penMove(Sudoku sudoku, Context context, int r, int c) {
         setBooleanPaintedCell(true);
         resetPencilCell();
-        if(Sudoku.completedBoardGame(BoardGameActivity.getArrayCellFragment())) {
-            Sudoku.winGame(context);
+        if(BoardGameFragment.completedBoardGame(BoardGameFragment.getArrayCell())) {
+            sudoku.winGame(context);
         }
-        if(KeyboardFragment.currentNumber.equals(Sudoku.boardGame[r][c])) {
+        if(KeyboardFragment.currentNumber.equals(sudoku.getBoardGame()[r][c])) {
             Animations.annimationCorrectCell(context, layout);
             mainNumber.setText(KeyboardFragment.currentNumber);
             setBackgroundColor(R.drawable.corner_radius_correct_cell);
         } else {
             Animations.animationIncorrectCell(context, layout);
-            Animations.animationHeartEmpty(context, LifeFragment.arrayIcon[Sudoku.life_counter]);
-            mainNumber.setText(Sudoku.boardGame[r][c]);
+            Animations.animationHeartEmpty(context, LifeFragment.arrayIcon[sudoku.getLifeCounter()]);
+            mainNumber.setText(sudoku.getBoardGame()[r][c]);
             setBackgroundColor(R.drawable.corner_radius_incorrect_cell);
-            if(Sudoku.life_counter == 0) {
-                Sudoku.loseGame(context);
+            if(sudoku.getLifeCounter() == 0) {
+                sudoku.loseGame(context);
             } else {
-                Sudoku.life_counter = Sudoku.life_counter - 1;
+                sudoku.setLifeCounter(sudoku.getLifeCounter() - 1);
             }
         }
     }

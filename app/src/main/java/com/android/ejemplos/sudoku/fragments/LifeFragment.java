@@ -43,14 +43,6 @@ public class LifeFragment extends Fragment {
         return view;
     }
 
-    public static void setIconImage(ImageView image, int drawable) {
-        image.setImageResource(drawable);
-    }
-
-    public static ImageView[] getArrayIcon() {
-        return arrayIcon;
-    }
-
     public static void restartIcons(Context context) {
         for (ImageView icon: arrayIcon) {
             Animations.animationHeartFull(context , icon);
