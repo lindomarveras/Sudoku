@@ -13,6 +13,7 @@ import com.android.ejemplos.sudoku.util.Animations;
 
 public class LifeFragment extends Fragment {
 
+    private static int lifeCounter;
     ImageView heart1;
     ImageView heart2;
     ImageView heart3;
@@ -43,9 +44,18 @@ public class LifeFragment extends Fragment {
         return view;
     }
 
-    public static void restartIcons(Context context) {
+    public static void restartLife(Context context) {
+        lifeCounter = 4;
         for (ImageView icon: arrayIcon) {
             Animations.animationHeartFull(context , icon);
         }
+    }
+
+    public static int getLifeCounter() {
+        return lifeCounter;
+    }
+
+    public static void setLifeCounter(int lifeCounter) {
+        LifeFragment.lifeCounter = lifeCounter;
     }
 }

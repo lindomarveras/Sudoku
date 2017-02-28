@@ -3,6 +3,7 @@ package com.android.ejemplos.sudoku.fragments;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -66,13 +67,13 @@ public class CellFragment extends Fragment {
         return view;
     }
 
-    public void cellClicked(final Sudoku sudoku, final int r, final int c) {
+    public void cellClicked(final int r, final int c) {
         layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
             if(!KeyboardFragment.currentNumber.equals("") && !booleanPaintedCell) {
                 if (GameActivity.penPencilOption == Constants.PEN_MODE) {
-                    penMove(sudoku, view.getContext(), r, c);
+                    penMove(view.getContext(), r, c);
                 } else if (GameActivity.penPencilOption == Constants.PENCIL_MODE) {
                     pencilMove();
                 }
@@ -81,26 +82,28 @@ public class CellFragment extends Fragment {
         });
     }
 
-    private void penMove(Sudoku sudoku, Context context, int r, int c) {
+    private void penMove(Context context, int r, int c) {
         setBooleanPaintedCell(true);
         resetPencilCell();
-        if(BoardGameFragment.completedBoardGame(BoardGameFragment.getArrayCell())) {
-            sudoku.winGame(context);
-        }
-        if(KeyboardFragment.currentNumber.equals(sudoku.getBoardGame()[r][c])) {
+        if(KeyboardFragment.currentNumber.equals(Sudoku.getBoardGame()[r][c])) {
             Animations.annimationCorrectCell(context, layout);
             mainNumber.setText(KeyboardFragment.currentNumber);
             setBackgroundColor(R.drawable.corner_radius_correct_cell);
         } else {
             Animations.animationIncorrectCell(context, layout);
-            Animations.animationHeartEmpty(context, LifeFragment.arrayIcon[sudoku.getLifeCounter()]);
-            mainNumber.setText(sudoku.getBoardGame()[r][c]);
+            Animations.animationHeartEmpty(context, LifeFragment.arrayIcon[LifeFragment.getLifeCounter()]);
+            mainNumber.setText(Sudoku.getBoardGame()[r][c]);
             setBackgroundColor(R.drawable.corner_radius_incorrect_cell);
-            if(sudoku.getLifeCounter() == 0) {
-                sudoku.loseGame(context);
+            if(LifeFragment.getLifeCounter() == 0) {
+                Sudoku.loseGame(context);
+                Log.d("life", "cell fragment pen move lose game" + LifeFragment.getLifeCounter());
             } else {
-                sudoku.setLifeCounter(sudoku.getLifeCounter() - 1);
+                LifeFragment.setLifeCounter(LifeFragment.getLifeCounter() - 1);
+                Log.d("life", "cell fragment pen move subtract a life" + LifeFragment.getLifeCounter());
             }
+        }
+        if(BoardGameFragment.completedBoardGame(BoardGameFragment.getArrayCell()) && LifeFragment.getLifeCounter() > 0) {
+            Sudoku.winGame(context);
         }
     }
 

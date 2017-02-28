@@ -17,9 +17,7 @@ import com.android.ejemplos.sudoku.model.Sudoku;
 
 public class GameActivity extends AppCompatActivity {
 
-    Sudoku sudoku = new Sudoku();
-
-    private static TextView textLevel;
+    public static TextView textLevel;
     public static Button penPencilButton;
     public static int penPencilOption = Constants.PEN_MODE;
     public static Chronometer chronometer;
@@ -37,9 +35,7 @@ public class GameActivity extends AppCompatActivity {
         penPencilButton = (Button) findViewById(R.id.activity_board_game_pen_pencil_button);
         chronometer = (Chronometer) findViewById(R.id.activity_board_game___chronometer);
 
-
         context = getApplicationContext();
-
 
         penPencilButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,7 +49,7 @@ public class GameActivity extends AppCompatActivity {
                 }
             }
         });
-        sudoku.resetGame(context, Constants.MEDIUM_LEVEL_CELL_NUMBER, Constants.MEDIUM_LEVEL_TEXT);
+        Sudoku.resetGame(context, Constants.MEDIUM_LEVEL_CELL_NUMBER, Constants.MEDIUM_LEVEL_TEXT);
     }
 
     @Override
@@ -85,11 +81,11 @@ public class GameActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.menu_level___easy) {
-            sudoku.resetGame(context, Constants.EASY_LEVEL_CELL_NUMBER, Constants.EASY_LEVEL_TEXT);
+            Sudoku.resetGame(context, Constants.EASY_LEVEL_CELL_NUMBER, Constants.EASY_LEVEL_TEXT);
         } else if (id == R.id.menu_level___medium) {
-            sudoku.resetGame(context, Constants.MEDIUM_LEVEL_CELL_NUMBER, Constants.MEDIUM_LEVEL_TEXT);
+            Sudoku.resetGame(context, Constants.MEDIUM_LEVEL_CELL_NUMBER, Constants.MEDIUM_LEVEL_TEXT);
         } else if(id == R.id.menu_level___hard) {
-            sudoku.resetGame(context, Constants.HARD_LEVEL_CELL_NUMBER, Constants.HARD_LEVEL_TEXT);
+            Sudoku.resetGame(context, Constants.HARD_LEVEL_CELL_NUMBER, Constants.HARD_LEVEL_TEXT);
         }
         return super.onOptionsItemSelected(item);
     }

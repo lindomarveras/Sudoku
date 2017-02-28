@@ -1,7 +1,7 @@
 package com.android.ejemplos.sudoku.util;
 
 public class Constants {
-    public static final int EASY_LEVEL_CELL_NUMBER = 40;
+    public static final int EASY_LEVEL_CELL_NUMBER = 90;
     public static final int MEDIUM_LEVEL_CELL_NUMBER = 20;
     public static final int HARD_LEVEL_CELL_NUMBER = 10;
 

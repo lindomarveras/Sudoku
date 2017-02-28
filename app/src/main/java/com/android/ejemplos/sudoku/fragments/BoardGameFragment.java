@@ -13,9 +13,6 @@ import java.util.Random;
 
 public class BoardGameFragment extends Fragment {
 
-    Sudoku sudoku = new Sudoku();
-
-
     private CellFragment cell_1_1;
     private CellFragment cell_1_2;
     private CellFragment cell_1_3;
@@ -302,7 +299,7 @@ public class BoardGameFragment extends Fragment {
 
         for (int r = 0; r < 9; r++) {
             for (int c = 0; c < 9; c++) {
-                arrayCell[r][c].cellClicked(sudoku, r, c);
+                arrayCell[r][c].cellClicked(r, c);
             }
         }
         return view;
@@ -311,7 +308,6 @@ public class BoardGameFragment extends Fragment {
     public static void generateBoardGame(int numberOfCells) {
         clearBoardGame(arrayCell);
         printRandomNumberInBoardGame(arrayCell, Sudoku.getBoardGame(), numberOfCells);
-
     }
 
     private static void printRandomNumberInBoardGame(CellFragment[][] arrayCellFragment, String[][] boardGame, int numberOfCells) {

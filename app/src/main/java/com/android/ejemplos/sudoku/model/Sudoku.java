@@ -11,7 +11,6 @@ import com.android.ejemplos.sudoku.fragments.LifeFragment;
 import com.android.ejemplos.sudoku.util.AlertDialog;
 
 public class Sudoku {
-    private int lifeCounter = 4;
     private static String[][] boardGame = {{"8", "2", "7", "1", "5", "4", "3", "9", "6"},
                                            {"9", "6", "5", "3", "2", "7", "1", "4", "8"},
                                            {"3", "4", "1", "6", "8", "9", "7", "5", "2"},
@@ -22,10 +21,9 @@ public class Sudoku {
                                            {"1", "5", "4", "7", "9", "6", "8", "2", "3"},
                                            {"2", "3", "9", "8", "4", "1", "5", "6", "7"}};
 
-    public void resetGame(Context context, int numberOfCells, String level) {
+    public static void resetGame(Context context, int numberOfCells, String level) {
         BoardGameFragment.generateBoardGame(numberOfCells);
-        LifeFragment.restartIcons(context);
-        lifeCounter = 4;
+        LifeFragment.restartLife(context);
         GameActivity.setTextLevel(level);
         GameActivity.chronometer.setBase(SystemClock.elapsedRealtime());
         GameActivity.chronometer.start();
@@ -35,7 +33,7 @@ public class Sudoku {
         KeyboardFragment.setEnabledKeyboard(true);
     }
 
-    public void winGame(Context context) {
+    public static void winGame(Context context) {
         AlertDialog.winner(context);
         GameActivity.chronometer.stop();
         GameActivity.penPencilButton.setText(R.string.activity_board_game_pen_text);
@@ -44,7 +42,7 @@ public class Sudoku {
         KeyboardFragment.setEnabledKeyboard(false);
     }
 
-    public void loseGame(Context context) {
+    public static void loseGame(Context context) {
         AlertDialog.gameOver(context);
         BoardGameFragment.setPaintedCellOptionToFalseInBoardBame(BoardGameFragment.getArrayCell());
         GameActivity.chronometer.stop();
@@ -52,14 +50,6 @@ public class Sudoku {
         GameActivity.penPencilButton.setEnabled(false);
         KeyboardFragment.resetKeyboard();
         KeyboardFragment.setEnabledKeyboard(false);
-    }
-
-    public int getLifeCounter() {
-        return lifeCounter;
-    }
-
-    public void setLifeCounter(int life_counter) {
-        this.lifeCounter = life_counter;
     }
 
     public static String[][] getBoardGame() {
