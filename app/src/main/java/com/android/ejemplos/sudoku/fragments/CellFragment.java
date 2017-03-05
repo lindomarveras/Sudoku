@@ -71,7 +71,7 @@ public class CellFragment extends Fragment {
         layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-            if(!KeyboardFragment.currentNumber.equals("") && !booleanPaintedCell) {
+            if(KeyboardFragment.currentNumber != 0 && !booleanPaintedCell) {
                 if (GameActivity.penPencilOption == Constants.PEN_MODE) {
                     penMove(view.getContext(), r, c);
                 } else if (GameActivity.penPencilOption == Constants.PENCIL_MODE) {
@@ -85,14 +85,14 @@ public class CellFragment extends Fragment {
     private void penMove(Context context, int r, int c) {
         setBooleanPaintedCell(true);
         resetPencilCell();
-        if(KeyboardFragment.currentNumber.equals(Sudoku.getBoardGame()[r][c])) {
+        if(KeyboardFragment.currentNumber == Sudoku.getBoardGame()[r][c]) {
             Animations.annimationCorrectCell(context, layout);
-            mainNumber.setText(KeyboardFragment.currentNumber);
+            mainNumber.setText("" + KeyboardFragment.currentNumber);
             setBackgroundColor(R.drawable.corner_radius_correct_cell);
         } else {
             Animations.animationIncorrectCell(context, layout);
             Animations.animationHeartEmpty(context, LifeFragment.arrayIcon[LifeFragment.getLifeCounter()]);
-            mainNumber.setText(Sudoku.getBoardGame()[r][c]);
+            mainNumber.setText("" + Sudoku.getBoardGame()[r][c]);
             setBackgroundColor(R.drawable.corner_radius_incorrect_cell);
             if(LifeFragment.getLifeCounter() == 0) {
                 Sudoku.loseGame(context);
@@ -109,7 +109,7 @@ public class CellFragment extends Fragment {
 
     private void pencilMove() {
         for (int i = 0; i < arrayPencil.length; i++) {
-            if(KeyboardFragment.currentNumber.equals(Integer.toString(i + 1))) {
+            if(KeyboardFragment.currentNumber == (i + 1)) {
                 if(arrayPencil[i].getVisibility() == View.VISIBLE) {
                     arrayPencil[i].setVisibility(View.INVISIBLE);
                 } else if(arrayPencil[i].getVisibility() == View.INVISIBLE) {

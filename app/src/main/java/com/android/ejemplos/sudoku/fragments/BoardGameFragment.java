@@ -310,13 +310,13 @@ public class BoardGameFragment extends Fragment {
         printRandomNumberInBoardGame(arrayCell, Sudoku.getBoardGame(), numberOfCells);
     }
 
-    private static void printRandomNumberInBoardGame(CellFragment[][] arrayCellFragment, String[][] boardGame, int numberOfCells) {
+    private static void printRandomNumberInBoardGame(CellFragment[][] arrayCellFragment, int[][] boardGame, int numberOfCells) {
         Random rndRow = new Random();
         Random rndColumn = new Random();
         for (int i = 0; i < numberOfCells; i++) {
             int r = rndRow.nextInt(9);
             int c = rndColumn.nextInt(9);
-            arrayCellFragment[r][c].setMainNumber(boardGame[r][c]);
+            arrayCellFragment[r][c].setMainNumber("" + boardGame[r][c]);
             arrayCellFragment[r][c].setBackgroundColor(R.drawable.corner_radius_initial_cell);
             arrayCellFragment[r][c].setBooleanPaintedCell(true);
         }
