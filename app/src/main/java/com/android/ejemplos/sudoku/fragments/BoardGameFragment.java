@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 
 import com.android.ejemplos.sudoku.R;
 import com.android.ejemplos.sudoku.model.Sudoku;
+import com.android.ejemplos.sudoku.model.SudokuGenerator;
 
 import java.util.Random;
 
@@ -307,7 +308,9 @@ public class BoardGameFragment extends Fragment {
 
     public static void generateBoardGame(int numberOfCells) {
         clearBoardGame(arrayCell);
-        printRandomNumberInBoardGame(arrayCell, Sudoku.getBoardGame(), numberOfCells);
+        int currentBoardGame[][] = SudokuGenerator.generateRandomBoardGame();
+        printRandomNumberInBoardGame(arrayCell, currentBoardGame, numberOfCells);
+        Sudoku.setBoardGame(currentBoardGame);
     }
 
     private static void printRandomNumberInBoardGame(CellFragment[][] arrayCellFragment, int[][] boardGame, int numberOfCells) {
