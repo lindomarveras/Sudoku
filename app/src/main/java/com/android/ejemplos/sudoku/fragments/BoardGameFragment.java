@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 
 import com.android.ejemplos.sudoku.R;
 import com.android.ejemplos.sudoku.model.Sudoku;
+import com.android.ejemplos.sudoku.model.SudokuGenerator;
 
 import java.util.Random;
 
@@ -307,16 +308,18 @@ public class BoardGameFragment extends Fragment {
 
     public static void generateBoardGame(int numberOfCells) {
         clearBoardGame(arrayCell);
-        printRandomNumberInBoardGame(arrayCell, Sudoku.getBoardGame(), numberOfCells);
+        int currentBoardGame[][] = SudokuGenerator.generateRandomBoardGame();
+        printRandomNumberInBoardGame(arrayCell, currentBoardGame, numberOfCells);
+        Sudoku.setBoardGame(currentBoardGame);
     }
 
-    private static void printRandomNumberInBoardGame(CellFragment[][] arrayCellFragment, String[][] boardGame, int numberOfCells) {
+    private static void printRandomNumberInBoardGame(CellFragment[][] arrayCellFragment, int[][] boardGame, int numberOfCells) {
         Random rndRow = new Random();
         Random rndColumn = new Random();
         for (int i = 0; i < numberOfCells; i++) {
             int r = rndRow.nextInt(9);
             int c = rndColumn.nextInt(9);
-            arrayCellFragment[r][c].setMainNumber(boardGame[r][c]);
+            arrayCellFragment[r][c].setMainNumber("" + boardGame[r][c]);
             arrayCellFragment[r][c].setBackgroundColor(R.drawable.corner_radius_initial_cell);
             arrayCellFragment[r][c].setBooleanPaintedCell(true);
         }

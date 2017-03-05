@@ -11,7 +11,7 @@ import com.android.ejemplos.sudoku.R;
 
 public class KeyboardFragment extends Fragment {
 
-    static String currentNumber = "";
+    static int currentNumber = 0;
 
     Button button1;
     Button button2;
@@ -57,7 +57,7 @@ public class KeyboardFragment extends Fragment {
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    currentNumber = button.getText().toString();
+                    currentNumber = Integer.parseInt((String) button.getText());
                     setBackgroundColor();
                 }
             });
@@ -68,7 +68,7 @@ public class KeyboardFragment extends Fragment {
 
     public void setBackgroundColor() {
         for (Button button: arrayButton) {
-            if(currentNumber.equals(button.getText().toString())) {
+            if(currentNumber == Integer.parseInt((String) button.getText())) {
                 button.setBackgroundResource(R.drawable.corner_radius_selected_keyboard_button);
             } else {
                 button.setBackgroundResource(R.drawable.corner_radius_unselected_keyboard_button);
@@ -77,7 +77,7 @@ public class KeyboardFragment extends Fragment {
     }
 
     public static void resetKeyboard() {
-        currentNumber = "";
+        currentNumber = 0;
         for (Button button: arrayButton) {
             button.setBackgroundResource(R.drawable.corner_radius_unselected_keyboard_button);
         }

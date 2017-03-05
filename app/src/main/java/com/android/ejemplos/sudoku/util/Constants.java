@@ -11,4 +11,8 @@ public class Constants {
 
     public static final int PEN_MODE = 0;
     public static final int PENCIL_MODE = 1;
+
+    public static final int BOARD_WIDTH = 9;
+    public static final int BOARD_HEIGHT = 9;
+
 }
