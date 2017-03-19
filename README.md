@@ -15,6 +15,9 @@ The game incudes two keyboard modes:
 * **PENCIL**. Use pencil mode to add notes in each cell. This mode will be useful to deduce the correct cell number.
 
 ## **Screenshot**
+![Splash](https://github.com/pemCristina/Sudoku/blob/master/SudokuScreenshotSplash.png)
+![Game2](https://github.com/pemCristina/Sudoku/blob/master/SudokuScreenshotGame2.png)
+![Game1](https://github.com/pemCristina/Sudoku/blob/master/SudokuScreenshotGame1.png)
 
 
 ## **Authors**
